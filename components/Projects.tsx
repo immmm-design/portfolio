@@ -2,25 +2,12 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { projects } from '@/data/projects';
 
 export default function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const [selectedFilter, setSelectedFilter] = useState('All');
-
-  // Get all unique tags
-  const allTags = Array.from(
-    new Set(projects.flatMap((project) => project.tags))
-  );
-  const filters = ['All', ...allTags];
-
-  // Filter projects based on selected filter
-  const filteredProjects =
-    selectedFilter === 'All'
-      ? projects
-      : projects.filter((project) => project.tags.includes(selectedFilter));
 
   return (
     <section id="projects" className="py-20 lg:py-32 bg-white" ref={ref}>
@@ -38,37 +25,15 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-lg text-gray-700 mb-8 lg:mb-12 max-w-3xl"
+          className="text-lg text-gray-700 mb-12 lg:mb-16 max-w-3xl"
         >
-          A selection of hands-on projects where I combined electrical,
-          embedded, and systems thinking to deliver working prototypes.
+          A selection of hands-on projects where I combined engineering expertise,
+          product thinking, and entrepreneurial drive to deliver real-world solutions.
         </motion.p>
-
-        {/* Filter tabs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap gap-3 mb-12"
-        >
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setSelectedFilter(filter)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                selectedFilter === filter
-                  ? 'bg-gray-900 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              {filter}
-            </button>
-          ))}
-        </motion.div>
 
         {/* Project cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {filteredProjects.map((project, index) => (
+          {projects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}

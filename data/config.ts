@@ -8,7 +8,7 @@ export const siteConfig: SiteConfig = {
   email: 'ivan.makarenko2001@gmail.com',
   phone: '(623) 309-6780',
   location: 'New York, NY',
-  linkedin: 'https://www.linkedin.com/in/ivan-makarenko',
+  linkedin: 'https://www.linkedin.com/in/ivanmakarenko',
   github: 'https://github.com/ivanmakarenko',
   accentColor: '#007AFF',
   animationsEnabled: true,

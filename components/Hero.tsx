@@ -20,10 +20,10 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center bg-[#F5F5F7]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left side - Content */}
+    <section id="hero" className="pt-24 pb-16 lg:pt-32 lg:pb-20 bg-[#F5F5F7]">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <button
                 onClick={() => scrollToSection('#projects')}
@@ -92,40 +92,26 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right side - Abstract visual */}
+          {/* Micro-highlights strip */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5, duration: 1, ease: 'easeOut' }}
-            className="hidden lg:flex items-center justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+            className="mt-12 lg:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
           >
-            <div className="relative w-full h-[500px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-purple-50 to-pink-100 rounded-3xl blur-3xl opacity-60" />
-              <div className="absolute inset-10 bg-gradient-to-tr from-blue-200 via-purple-100 to-pink-200 rounded-3xl blur-2xl opacity-50" />
-              <div className="absolute inset-20 bg-white/50 rounded-3xl backdrop-blur-sm" />
-            </div>
+            {heroHighlights.map((highlight, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 + index * 0.1, duration: 0.6 }}
+                className="text-sm text-gray-600 leading-relaxed"
+              >
+                {highlight.text}
+              </motion.div>
+            ))}
           </motion.div>
         </div>
-
-        {/* Micro-highlights strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="mt-16 lg:mt-24 grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          {heroHighlights.map((highlight, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 + index * 0.1, duration: 0.6 }}
-              className="text-sm text-gray-600 leading-relaxed"
-            >
-              {highlight.text}
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );
