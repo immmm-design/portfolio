@@ -18,13 +18,14 @@ export default function Experience() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   return (
-    <section id="experience" className="py-20 lg:py-32 bg-[#F5F5F7]" ref={ref}>
+    <section id="experience" className="py-20 lg:py-32" style={{ backgroundColor: 'var(--bg-muted)' }} ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6"
+          className="text-3xl lg:text-5xl font-bold mb-6"
+          style={{ color: 'var(--text-main)' }}
         >
           Experience
         </motion.h2>
@@ -33,7 +34,8 @@ export default function Experience() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-lg text-gray-700 mb-12 lg:mb-16 max-w-3xl"
+          className="text-lg mb-12 lg:mb-16 max-w-3xl"
+          style={{ color: 'var(--text-muted)' }}
         >
           I&apos;ve worked across automation engineering, new product
           development, and IT systems consulting. In each role, I focus on
@@ -52,29 +54,29 @@ export default function Experience() {
               className="relative"
             >
               {/* Timeline line (desktop only) */}
-              <div className="hidden lg:block absolute left-0 top-0 bottom-0 w-px bg-gray-300">
+              <div className="hidden lg:block absolute left-0 top-0 bottom-0 w-px" style={{ backgroundColor: 'var(--accent-primary-soft)' }}>
                 <div
-                  className={`absolute left-1/2 top-6 -translate-x-1/2 w-3 h-3 rounded-full transition-all duration-300 ${
-                    hoveredId === exp.id
-                      ? 'bg-gray-900 scale-150'
-                      : 'bg-gray-400'
-                  }`}
+                  className="absolute left-1/2 top-6 -translate-x-1/2 w-3 h-3 rounded-full transition-all duration-300"
+                  style={{
+                    backgroundColor: hoveredId === exp.id ? 'var(--accent-primary)' : 'var(--accent-primary-soft)',
+                    transform: hoveredId === exp.id ? 'translateX(-50%) scale(1.5)' : 'translateX(-50%)'
+                  }}
                 />
               </div>
 
               {/* Content */}
-              <div className="lg:ml-12 bg-white rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+              <div className="lg:ml-12 rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 border" style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border-subtle)' }}>
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
                   <div>
-                    <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-xl lg:text-2xl font-bold mb-2" style={{ color: 'var(--text-main)' }}>
                       {exp.role}
                     </h3>
-                    <p className="text-lg font-medium text-gray-700 mb-1">
+                    <p className="text-lg font-medium mb-1" style={{ color: 'var(--text-main)' }}>
                       {exp.company}
                     </p>
-                    <p className="text-sm text-gray-600">{exp.location}</p>
+                    <p className="text-sm" style={{ color: 'var(--text-muted)' }}>{exp.location}</p>
                   </div>
-                  <div className="mt-2 lg:mt-0 text-sm font-medium text-gray-600">
+                  <div className="mt-2 lg:mt-0 text-sm font-medium" style={{ color: 'var(--text-muted)' }}>
                     {formatDate(exp.startDate)} – {formatDate(exp.endDate)}
                   </div>
                 </div>
@@ -83,9 +85,10 @@ export default function Experience() {
                   {exp.bullets.map((bullet, bulletIndex) => (
                     <li
                       key={bulletIndex}
-                      className="flex items-start text-gray-700 leading-relaxed"
+                      className="flex items-start leading-relaxed"
+                      style={{ color: 'var(--text-muted)' }}
                     >
-                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 mr-3 flex-shrink-0" />
+                      <span className="inline-block w-1.5 h-1.5 rounded-full mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: 'var(--accent-primary-soft)' }} />
                       <span>{bullet}</span>
                     </li>
                   ))}
