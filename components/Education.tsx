@@ -20,11 +20,16 @@ export default function Education() {
   const schoolInfo: Record<string, { logo: string; width: number; height: number }> = {
     columbia: {
       logo: '/logos/columbia.webp',
-      width: 120,
-      height: 60,
+      width: 100,
+      height: 100,
     },
     asu: {
       logo: '/logos/asu.png',
+      width: 100,
+      height: 100,
+    },
+    lfa: {
+      logo: '/logos/lfa.jpg',
       width: 100,
       height: 100,
     },

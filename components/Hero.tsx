@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { heroHighlights } from '@/data/hero';
 import { siteConfig } from '@/data/config';
 
 export default function Hero() {
@@ -103,27 +102,6 @@ export default function Hero() {
                 Download Resume
               </a>
             </motion.div>
-          </motion.div>
-
-          {/* Micro-highlights strip */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-            className="mt-12 lg:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            {heroHighlights.map((highlight, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 + index * 0.1, duration: 0.6 }}
-                className="text-sm leading-relaxed"
-                style={{ color: 'var(--text-muted)' }}
-              >
-                {highlight.text}
-              </motion.div>
-            ))}
           </motion.div>
         </div>
       </div>

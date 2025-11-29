@@ -19,4 +19,13 @@ export const education: Education[] = [
     endDate: '2024-12',
     note: 'Focused on robotics, embedded systems, and real-world capstone projects.',
   },
+  {
+    id: 'lfa',
+    institution: 'Lake Forest Academy',
+    degree: 'High School Diploma',
+    location: 'Lake Forest, IL',
+    startDate: '2017-07',
+    endDate: '2020-05',
+    note: 'Elected Captain of Varsity Swimming (3 years Varsity). Active member of Ukrainian Association.',
+  },
 ];
