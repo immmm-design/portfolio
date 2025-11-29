@@ -43,7 +43,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-4xl lg:text-6xl font-bold mb-6 leading-tight"
+              className="text-3xl lg:text-5xl font-bold mb-6 leading-tight"
               style={{ color: 'var(--text-main)' }}
             >
               Building products at the intersection of hardware, software, and
@@ -57,7 +57,7 @@ export default function Hero() {
               className="text-lg lg:text-xl mb-6 leading-relaxed"
               style={{ color: 'var(--text-muted)' }}
             >
-              I&apos;m Ivan, an aspiring Product Manager and robotics engineer
+              I&apos;m Ivan, an aspiring Product Manager and Robotics Engineer
               based in New York. I combine automation, embedded systems, and
               process optimization to turn ideas into practical, scalable
               solutions.
@@ -118,7 +118,8 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 + index * 0.1, duration: 0.6 }}
-                className="text-sm text-gray-600 leading-relaxed"
+                className="text-sm leading-relaxed"
+                style={{ color: 'var(--text-muted)' }}
               >
                 {highlight.text}
               </motion.div>

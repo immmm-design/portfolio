@@ -10,7 +10,7 @@ export default function Contact() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="contact" className="py-20 lg:py-32 bg-[#F5F5F7]" ref={ref}>
+    <section id="contact" className="py-20 lg:py-32" style={{ backgroundColor: 'var(--bg-muted)' }} ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -18,11 +18,11 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl lg:text-5xl font-bold mb-6" style={{ color: 'var(--text-main)' }}>
             Let&apos;s Connect
           </h2>
 
-          <p className="text-lg text-gray-700 mb-12">
+          <p className="text-lg mb-12" style={{ color: 'var(--text-muted)' }}>
             If you&apos;re interested in product roles, technical work, or just
             want to talk about robotics and automation, feel free to reach out.
           </p>
@@ -31,38 +31,41 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white rounded-2xl p-8 lg:p-12 shadow-sm mb-8"
+            className="rounded-2xl p-8 lg:p-12 shadow-sm mb-8 border"
+            style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border-subtle)' }}
           >
             <div className="grid sm:grid-cols-2 gap-8">
               <div className="text-left">
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                <h3 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>
                   Email
                 </h3>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="text-gray-900 font-medium hover:text-gray-700 transition-colors"
+                  className="font-medium transition-colors"
+                  style={{ color: 'var(--accent-primary)' }}
                 >
                   {siteConfig.email}
                 </a>
               </div>
 
               <div className="text-left">
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                <h3 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>
                   Location
                 </h3>
-                <p className="text-gray-900 font-medium">
+                <p className="font-medium" style={{ color: 'var(--text-main)' }}>
                   {siteConfig.location}
                 </p>
               </div>
 
               {siteConfig.phone && (
                 <div className="text-left">
-                  <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                  <h3 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>
                     Phone
                   </h3>
                   <a
                     href={`tel:${siteConfig.phone.replace(/\D/g, '')}`}
-                    className="text-gray-900 font-medium hover:text-gray-700 transition-colors"
+                    className="font-medium transition-colors"
+                    style={{ color: 'var(--accent-primary)' }}
                   >
                     {siteConfig.phone}
                   </a>
@@ -70,14 +73,15 @@ export default function Contact() {
               )}
 
               <div className="text-left">
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                <h3 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>
                   LinkedIn
                 </h3>
                 <a
                   href={siteConfig.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-900 font-medium hover:text-gray-700 transition-colors inline-flex items-center"
+                  className="font-medium transition-colors inline-flex items-center"
+                  style={{ color: 'var(--accent-primary)' }}
                 >
                   View Profile
                   <svg
@@ -106,7 +110,11 @@ export default function Contact() {
           >
             <a
               href={`mailto:${siteConfig.email}`}
-              className="px-8 py-3 bg-gray-900 text-white font-medium rounded-full hover:bg-gray-800 transition-all hover:shadow-lg hover:-translate-y-0.5"
+              className="px-8 py-3 font-medium rounded-full transition-all hover:shadow-lg hover:-translate-y-0.5"
+              style={{
+                backgroundColor: 'var(--btn-primary-bg)',
+                color: 'var(--btn-primary-text)',
+              }}
             >
               Email Me
             </a>
@@ -114,7 +122,12 @@ export default function Contact() {
               href={siteConfig.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-white text-gray-900 font-medium rounded-full border-2 border-gray-300 hover:border-gray-400 transition-all hover:shadow-lg hover:-translate-y-0.5"
+              className="px-8 py-3 font-medium rounded-full border-2 transition-all hover:shadow-lg hover:-translate-y-0.5"
+              style={{
+                backgroundColor: 'var(--btn-secondary-bg)',
+                borderColor: 'var(--btn-secondary-border)',
+                color: 'var(--btn-secondary-text)',
+              }}
             >
               View LinkedIn
             </a>

@@ -96,23 +96,25 @@ export default function Navigation() {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => scrollToSection(e, link.href)}
-                  className={`text-sm font-medium transition-all relative ${
+                  className={`text-sm transition-all relative pb-1 ${
                     activeSection === link.href.slice(1)
-                      ? 'after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full'
-                      : ''
+                      ? 'font-bold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full'
+                      : 'font-medium'
                   }`}
                   style={{
                     color:
                       activeSection === link.href.slice(1)
                         ? 'var(--accent-primary)'
                         : 'var(--text-muted)',
-                    backgroundColor:
-                      activeSection === link.href.slice(1)
-                        ? 'var(--accent-primary)'
-                        : 'transparent',
                   }}
                 >
-                  {link.name}
+                  <span>{link.name}</span>
+                  {activeSection === link.href.slice(1) && (
+                    <span
+                      className="absolute bottom-0 left-0 right-0 h-0.5 rounded-full"
+                      style={{ backgroundColor: 'var(--accent-primary)' }}
+                    />
+                  )}
                 </a>
               ))}
               <ThemeToggle />
@@ -183,7 +185,9 @@ export default function Navigation() {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => scrollToSection(e, link.href)}
-                  className="block text-base font-medium transition-colors"
+                  className={`block text-base transition-colors ${
+                    activeSection === link.href.slice(1) ? 'font-bold' : 'font-medium'
+                  }`}
                   style={{
                     color:
                       activeSection === link.href.slice(1)

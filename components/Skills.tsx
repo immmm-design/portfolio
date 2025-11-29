@@ -10,13 +10,14 @@ export default function Skills() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="skills" className="py-20 lg:py-32 bg-[#F5F5F7]" ref={ref}>
+    <section id="skills" className="py-20 lg:py-32" style={{ backgroundColor: 'var(--bg-muted)' }} ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6"
+          className="text-3xl lg:text-5xl font-bold mb-6"
+          style={{ color: 'var(--text-main)' }}
         >
           Skills & Tools
         </motion.h2>
@@ -25,7 +26,8 @@ export default function Skills() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-lg text-gray-700 mb-12 lg:mb-16 max-w-3xl"
+          className="text-lg mb-12 lg:mb-16 max-w-3xl"
+          style={{ color: 'var(--text-muted)' }}
         >
           I bridge technical depth with product thinking. Here&apos;s how I work
           across software, hardware, and systems.
@@ -38,18 +40,20 @@ export default function Skills() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-md transition-all duration-300"
+              className="rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-md transition-all duration-300 border"
+              style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border-subtle)' }}
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold mb-4" style={{ color: 'var(--text-main)' }}>
                 {group.title}
               </h3>
               <ul className="space-y-2">
                 {group.skills.map((skill, skillIndex) => (
                   <li
                     key={skillIndex}
-                    className="flex items-start text-gray-700 text-sm leading-relaxed"
+                    className="flex items-start text-sm leading-relaxed"
+                    style={{ color: 'var(--text-muted)' }}
                   >
-                    <span className="inline-block w-1.5 h-1.5 rounded-full bg-gray-400 mt-1.5 mr-2 flex-shrink-0" />
+                    <span className="inline-block w-1.5 h-1.5 rounded-full mt-1.5 mr-2 flex-shrink-0" style={{ backgroundColor: 'var(--accent-primary-soft)' }} />
                     <span>{skill}</span>
                   </li>
                 ))}

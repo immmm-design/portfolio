@@ -3,23 +3,22 @@
 import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
 
-    // Get theme from localStorage or system preference
+    // Get theme from localStorage or default to dark
     const storedTheme = localStorage.getItem('ivan-theme') as 'light' | 'dark' | null;
 
     if (storedTheme) {
       setTheme(storedTheme);
       document.documentElement.classList.toggle('dark', storedTheme === 'dark');
     } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const initialTheme = prefersDark ? 'dark' : 'light';
-      setTheme(initialTheme);
-      document.documentElement.classList.toggle('dark', prefersDark);
+      // Default to dark mode
+      setTheme('dark');
+      document.documentElement.classList.add('dark');
     }
   }, []);
 
