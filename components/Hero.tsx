@@ -1,8 +1,35 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { siteConfig } from '@/data/config';
+import Image from 'next/image';
 
 export default function Hero() {
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+
+  useEffect(() => {
+    // Check initial theme
+    const isDark = document.documentElement.classList.contains('dark');
+    setTheme(isDark ? 'dark' : 'light');
+
+    // Listen for theme changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'class') {
+          const isDark = document.documentElement.classList.contains('dark');
+          setTheme(isDark ? 'dark' : 'light');
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.querySelector(sectionId);
     if (element) {
@@ -20,16 +47,61 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full flex items-center justify-center"
+      className="relative w-full flex items-center justify-center overflow-hidden"
       style={{
-        backgroundColor: 'var(--hero-bg)',
         paddingTop: '96px',
         paddingBottom: '96px',
         minHeight: '80vh',
       }}
     >
+      {/* Background Images */}
+      <div className="absolute inset-0 z-0">
+        {/* Light mode background (NYC Day) */}
+        <div
+          className="absolute inset-0 transition-opacity duration-700"
+          style={{
+            opacity: theme === 'light' ? 1 : 0,
+          }}
+        >
+          <Image
+            src="/nyc-day.png"
+            alt="NYC Day"
+            fill
+            className="object-cover"
+            priority
+            quality={90}
+          />
+        </div>
+
+        {/* Dark mode background (NYC Night) */}
+        <div
+          className="absolute inset-0 transition-opacity duration-700"
+          style={{
+            opacity: theme === 'dark' ? 1 : 0,
+          }}
+        >
+          <Image
+            src="/nyc-night.png"
+            alt="NYC Night"
+            fill
+            className="object-cover"
+            priority
+            quality={90}
+          />
+        </div>
+
+        {/* Overlay for text readability */}
+        <div
+          className="absolute inset-0 transition-opacity duration-700"
+          style={{
+            backgroundColor: theme === 'light' ? 'rgba(255, 255, 255, 0.75)' : 'rgba(0, 0, 0, 0.6)',
+          }}
+        />
+      </div>
+
+      {/* Content */}
       <div
-        className="hero-fade-in w-full px-6 lg:px-8"
+        className="hero-fade-in w-full px-6 lg:px-8 relative z-10"
         style={{
           maxWidth: '1100px',
           margin: '0 auto',
