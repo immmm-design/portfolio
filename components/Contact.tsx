@@ -101,37 +101,6 @@ export default function Contact() {
               </div>
             </div>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <a
-              href={`mailto:${siteConfig.email}`}
-              className="px-8 py-3 font-medium rounded-full transition-all hover:shadow-lg hover:-translate-y-0.5"
-              style={{
-                backgroundColor: 'var(--btn-primary-bg)',
-                color: 'var(--btn-primary-text)',
-              }}
-            >
-              Email Me
-            </a>
-            <a
-              href={siteConfig.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 font-medium rounded-full border-2 transition-all hover:shadow-lg hover:-translate-y-0.5"
-              style={{
-                backgroundColor: 'var(--btn-secondary-bg)',
-                borderColor: 'var(--btn-secondary-border)',
-                color: 'var(--btn-secondary-text)',
-              }}
-            >
-              View LinkedIn
-            </a>
-          </motion.div>
         </motion.div>
       </div>
     </section>
