@@ -22,6 +22,12 @@
   --btn-secondary-bg: transparent;
   --btn-secondary-border: var(--accent-primary);
   --btn-secondary-text: var(--accent-primary);
+
+  /* Hero-specific variables */
+  --hero-bg: var(--bg-page);
+  --hero-text-main: var(--text-main);
+  --hero-text-muted: var(--text-muted);
+  --hero-accent: #012169;
 }
 
 .dark {
@@ -42,6 +48,12 @@
   --btn-secondary-bg: transparent;
   --btn-secondary-border: var(--accent-primary);
   --btn-secondary-text: var(--accent-primary);
+
+  /* Hero-specific variables for dark mode */
+  --hero-bg: #0d1117;
+  --hero-text-main: #f9fafb;
+  --hero-text-muted: #9ca3af;
+  --hero-accent: #4e8ef7;
 }
 
 * {
@@ -54,4 +66,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hero fade-in animation */
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-fade-in {
+  animation: heroFadeIn 600ms ease-out forwards;
 }

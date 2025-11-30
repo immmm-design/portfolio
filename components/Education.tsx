@@ -19,7 +19,7 @@ export default function Education() {
   // School logos and colors
   const schoolInfo: Record<string, { logo: string; width: number; height: number }> = {
     columbia: {
-      logo: '/logos/columbia.webp',
+      logo: '/logos/columbia.jpg',
       width: 100,
       height: 100,
     },
