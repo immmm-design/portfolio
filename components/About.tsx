@@ -56,20 +56,20 @@ export default function About() {
             <div className="space-y-4 leading-relaxed text-lg" style={{ color: 'var(--text-muted)' }}>
               <p className="font-semibold" style={{ color: 'var(--text-main)' }}>My journey has three main pillars:</p>
 
-              <div className="pl-4 border-l-4" style={{ borderColor: 'var(--accent-primary)', opacity: 1 }}>
-                <p className="mb-2">
+              <div className="pl-4 border-l-4" style={{ borderColor: 'var(--accent-primary)' }}>
+                <p className="mb-2" style={{ color: 'var(--text-muted)' }}>
                   <strong style={{ color: 'var(--text-main)' }}>The Engineer:</strong> With a B.S. in Robotics, I have hands-on experience in automation and electrical design (including the NASA Psyche Mission Capstone). I can speak the language of engineering teams, vetting technical feasibility in Python, C++, and SQL.
                 </p>
               </div>
 
-              <div className="pl-4 border-l-4" style={{ borderColor: 'var(--accent-primary)', opacity: 0.8 }}>
-                <p className="mb-2">
+              <div className="pl-4 border-l-4" style={{ borderColor: 'var(--accent-primary)' }}>
+                <p className="mb-2" style={{ color: 'var(--text-muted)' }}>
                   <strong style={{ color: 'var(--text-main)' }}>The Entrepreneur:</strong> For over 5 years, I ran my own IT services venture. This taught me the fundamentals of Product Management: understanding user pain points, managing ambiguity, and delivering value under tight constraints.
                 </p>
               </div>
 
-              <div className="pl-4 border-l-4" style={{ borderColor: 'var(--accent-primary)', opacity: 0.6 }}>
-                <p className="mb-2">
+              <div className="pl-4 border-l-4" style={{ borderColor: 'var(--accent-primary)' }}>
+                <p className="mb-2" style={{ color: 'var(--text-muted)' }}>
                   <strong style={{ color: 'var(--text-main)' }}>The Strategist:</strong> At Columbia, I am bridging these worlds, focusing on Product Strategy, Digital Transformation, and Agile Leadership.
                 </p>
               </div>
