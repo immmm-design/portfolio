@@ -9,9 +9,9 @@ export const experiences: Experience[] = [
     startDate: '2024-06',
     endDate: '2024-08',
     bullets: [
-      'Created and revised electrical drawings in Revit and AutoCAD for mining infrastructure projects to align with engineering standards.',
-      'Updated complex Revit models to improve schematic clarity and reduce calculation errors across teams.',
-      'Developed and maintained Excel-based project trackers that streamlined documentation and improved coordination.',
+      'Identified 25% error rate in legacy electrical schematics causing project delays across mining infrastructure teams. Led Revit model updates for 12 projects, reducing cross-team coordination errors by 20% and accelerating approval cycles.',
+      'Improved schematic clarity for complex electrical systems by standardizing Revit drawing templates, enabling faster design reviews and reducing rework cycles for engineering teams.',
+      'Built Excel-based project tracking system that streamlined documentation workflows and improved cross-functional coordination between electrical, mechanical, and civil engineering teams.',
     ],
   },
   {
@@ -22,9 +22,9 @@ export const experiences: Experience[] = [
     startDate: '2023-06',
     endDate: '2023-08',
     bullets: [
-      'Designed robotic assembly improvements in SolidWorks/CAD to enhance manufacturing efficiency and precision.',
-      'Built Excel-based model tracking systems for truck part data, reducing design cycle time by ~30%.',
-      'Assembled two OTC robotic welding systems with engineers, ensuring reliable integration and operation.',
+      'Built Excel database tracking vehicle trim specifications and module compatibility across 50+ truck models, reducing design cycle time by 30%. System enabled faster go-to-market decisions, helping company increase output from 3 parts per quarter to 4 and maintain first-to-market position in competitive aftermarket.',
+      'Worked across full product development lifecycle from laser scanning real vehicles through CAD design to robotic assembly and testing. Designed SolidWorks-based manufacturing improvements for bumpers, fenders, and chassis components that increased assembly precision and efficiency.',
+      'Assembled two OTC robotic welding systems with engineering team as part of 40,000 sq ft facility expansion, ensuring reliable integration and operation for high-volume production.',
     ],
   },
   {
@@ -35,9 +35,9 @@ export const experiences: Experience[] = [
     startDate: '2019-06',
     endDate: 'Present',
     bullets: [
-      'Provided technology support and consulting for individuals and small businesses, including custom PC builds, software setup, and network configuration.',
-      'Improved system reliability and performance through tailored hardware and software solutions.',
-      'Built long-term client relationships through responsive, practical problem-solving.',
+      'Built profitable IT consulting practice serving 20+ clients (individuals and small businesses) with custom software, websites, and data analytics solutions. Generated $20K-$70K annually while studying full-time in the U.S., growing entirely through referrals.',
+      'Managed end-to-end product lifecycle for every engagement: conducted discovery interviews to identify root problems, prioritized features based on ROI and constraints, developed custom solutions, and iterated post-launch based on measurable outcomes.',
+      'Achieved zero client churn over 5+ years by focusing on practical problem-solving and responsive service. Developed systems thinking by identifying patterns across industries and building reusable solutions.',
     ],
   },
 ];

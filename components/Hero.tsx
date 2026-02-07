@@ -117,7 +117,7 @@ export default function Hero() {
               color: 'var(--hero-text-muted)',
             }}
           >
-            Product Management · Robotics · Automation
+            Product Manager · Robotics Engineer · Entrepreneur
           </div>
 
           {/* Main Headline */}
@@ -129,7 +129,7 @@ export default function Hero() {
               color: 'var(--hero-text-main)',
             }}
           >
-            Building products at the intersection of hardware, software, and people.
+            I help hardware teams ship innovative products faster by bridging deep technical expertise with business strategy
           </h1>
 
           {/* Subheadline / Bio */}
@@ -143,9 +143,7 @@ export default function Hero() {
               color: 'var(--hero-text-muted)',
             }}
           >
-            I&apos;m Ivan, an aspiring Product Manager and Robotics Engineer based in New York.
-            I combine hands-on experience in automation, embedded systems, and manufacturing with
-            product thinking and process optimization to turn complex ideas into practical, scalable solutions.
+            From Ukrainian swimming champion to U.S. boarding school to robotics engineer, my journey taught me to solve hard problems under pressure. I've spent 5+ years building physical products like NASA asteroid rovers, off-road vehicle systems, and consumer hardware while running a profitable IT consulting business. Now at Columbia studying Technology Management, I'm combining hands-on engineering depth with product strategy to lead teams building the next generation of tech products.
           </p>
 
           {/* Location & Education Line */}
