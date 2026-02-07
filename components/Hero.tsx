@@ -129,7 +129,7 @@ export default function Hero() {
               color: 'var(--hero-text-main)',
             }}
           >
-            I help hardware teams ship innovative products faster by bridging deep technical expertise with business strategy
+            I help teams ship products faster by bridging technical expertise with strategy
           </h1>
 
           {/* Subheadline / Bio */}
