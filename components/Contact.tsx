@@ -13,9 +13,9 @@ export default function Contact() {
     <section id="contact" className="py-20 lg:py-32" style={{ backgroundColor: 'var(--bg-muted)' }} ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 20, scale: 0.95 }}
+          animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
           className="max-w-3xl mx-auto text-center"
         >
           <h2 className="text-3xl lg:text-5xl font-bold mb-6" style={{ color: 'var(--text-main)' }}>

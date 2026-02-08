@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { siteConfig } from '@/data/config';
 import ThemeToggle from './ThemeToggle';
 
@@ -99,7 +100,7 @@ export default function Navigation() {
                   onClick={(e) => scrollToSection(e, link.href)}
                   className={`text-sm transition-all relative pb-1 ${
                     activeSection === link.href.slice(1)
-                      ? 'font-bold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full'
+                      ? 'font-bold'
                       : 'font-medium'
                   }`}
                   style={{
@@ -111,9 +112,13 @@ export default function Navigation() {
                 >
                   <span>{link.name}</span>
                   {activeSection === link.href.slice(1) && (
-                    <span
+                    <motion.span
+                      layoutId="nav-underline"
                       className="absolute bottom-0 left-0 right-0 h-0.5 rounded-full"
                       style={{ backgroundColor: 'var(--accent-primary)' }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.3, ease: 'easeOut' }}
                     />
                   )}
                 </a>

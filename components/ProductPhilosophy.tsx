@@ -1,8 +1,79 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+
+// Tilt Card Component with 3D effect
+function TiltCard({ principle, index, isInView }: { principle: { title: string; description: string }; index: number; isInView: boolean }) {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  // Mouse position tracking
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  // Spring animations for smooth movement
+  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [10, -10]), { stiffness: 300, damping: 30 });
+  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-10, 10]), { stiffness: 300, damping: 30 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+
+    const rect = cardRef.current.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    // Normalize to -0.5 to 0.5 range
+    const x = (e.clientX - centerX) / rect.width;
+    const y = (e.clientY - centerY) / rect.height;
+
+    mouseX.set(x);
+    mouseY.set(y);
+  };
+
+  const handleMouseLeave = () => {
+    mouseX.set(0);
+    mouseY.set(0);
+  };
+
+  return (
+    <motion.div
+      ref={cardRef}
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        rotateX,
+        rotateY,
+        transformStyle: 'preserve-3d',
+        perspective: 1000,
+      }}
+      className="p-6 rounded-xl border"
+    >
+      <div
+        style={{
+          backgroundColor: 'var(--bg-card)',
+          borderColor: 'var(--border-subtle)',
+          boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+          borderWidth: '1px',
+          borderStyle: 'solid',
+          borderRadius: '0.75rem',
+          padding: '1.5rem',
+          transform: 'translateZ(20px)',
+        }}
+      >
+        <h3 className="text-xl font-bold mb-3" style={{ color: 'var(--text-main)' }}>
+          {principle.title}
+        </h3>
+        <p className="leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+          {principle.description}
+        </p>
+      </div>
+    </motion.div>
+  );
+}
 
 export default function ProductPhilosophy() {
   const ref = useRef(null);
@@ -40,9 +111,9 @@ export default function ProductPhilosophy() {
     >
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 20, scale: 0.95 }}
+          animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
           className="text-3xl lg:text-5xl font-bold mb-6"
           style={{ color: 'var(--text-main)' }}
         >
@@ -50,9 +121,9 @@ export default function ProductPhilosophy() {
         </motion.h2>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          initial={{ opacity: 0, y: 20, scale: 0.95 }}
+          animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
           className="text-xl mb-12 lg:mb-16 leading-relaxed"
           style={{ color: 'var(--text-muted)' }}
         >
@@ -62,43 +133,7 @@ export default function ProductPhilosophy() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {principles.map((principle, index) => (
-            <motion.div
-              key={principle.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
-              whileHover={{
-                y: -6,
-                transition: { duration: 0.25, ease: 'easeOut' }
-              }}
-              className="p-6 rounded-xl border"
-              style={{
-                backgroundColor: 'var(--bg-card)',
-                borderColor: 'var(--border-subtle)',
-                boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)';
-                e.currentTarget.style.borderColor = 'var(--accent-primary-soft)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)';
-                e.currentTarget.style.borderColor = 'var(--border-subtle)';
-              }}
-            >
-              <h3
-                className="text-xl font-bold mb-3"
-                style={{ color: 'var(--text-main)' }}
-              >
-                {principle.title}
-              </h3>
-              <p
-                className="leading-relaxed"
-                style={{ color: 'var(--text-muted)' }}
-              >
-                {principle.description}
-              </p>
-            </motion.div>
+            <TiltCard key={principle.title} principle={principle} index={index} isInView={isInView} />
           ))}
         </div>
 
