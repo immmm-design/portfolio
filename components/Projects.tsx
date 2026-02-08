@@ -41,8 +41,25 @@ export default function Projects() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-              className="group rounded-2xl p-6 lg:p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer border"
-              style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border-subtle)' }}
+              whileHover={{
+                y: -10,
+                scale: 1.02,
+                transition: { duration: 0.3, ease: 'easeOut' }
+              }}
+              className="group rounded-2xl p-6 lg:p-8 cursor-pointer border"
+              style={{
+                backgroundColor: 'var(--bg-card)',
+                borderColor: 'var(--border-subtle)',
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+                e.currentTarget.style.borderColor = 'var(--accent-primary)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
+                e.currentTarget.style.borderColor = 'var(--border-subtle)';
+              }}
             >
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-4">

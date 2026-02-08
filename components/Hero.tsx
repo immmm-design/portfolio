@@ -1,11 +1,21 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useScroll, useTransform, motion } from 'framer-motion';
 import { siteConfig } from '@/data/config';
 import Image from 'next/image';
 
 export default function Hero() {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const heroRef = useRef(null);
+
+  // Parallax effect - background moves slower than scroll (0.3 speed ratio)
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start start', 'end start']
+  });
+
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
 
   useEffect(() => {
     // Check initial theme
@@ -46,6 +56,7 @@ export default function Hero() {
 
   return (
     <section
+      ref={heroRef}
       id="hero"
       className="relative w-full flex items-center justify-center overflow-hidden"
       style={{
@@ -54,8 +65,11 @@ export default function Hero() {
         minHeight: '80vh',
       }}
     >
-      {/* Background Images */}
-      <div className="absolute inset-0 z-0">
+      {/* Background Images with Parallax */}
+      <motion.div
+        className="absolute inset-0 z-0"
+        style={{ y: backgroundY }}
+      >
         {/* Light mode background (NYC Day) */}
         <div
           className="absolute inset-0 transition-opacity duration-700"
@@ -97,7 +111,7 @@ export default function Hero() {
             backgroundColor: theme === 'light' ? 'rgba(255, 255, 255, 0.75)' : 'rgba(0, 0, 0, 0.6)',
           }}
         />
-      </div>
+      </motion.div>
 
       {/* Content */}
       <div

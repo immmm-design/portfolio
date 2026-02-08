@@ -1,4 +1,5 @@
 import Navigation from '@/components/Navigation';
+import ScrollProgress from '@/components/ScrollProgress';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import ProductPhilosophy from '@/components/ProductPhilosophy';
@@ -12,6 +13,7 @@ import Footer from '@/components/Footer';
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <ScrollProgress />
       <Navigation />
       <Hero />
       <About />

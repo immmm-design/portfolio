@@ -64,13 +64,26 @@ export default function ProductPhilosophy() {
           {principles.map((principle, index) => (
             <motion.div
               key={principle.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              className="p-6 rounded-xl border shadow-sm"
+              transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
+              whileHover={{
+                y: -6,
+                transition: { duration: 0.25, ease: 'easeOut' }
+              }}
+              className="p-6 rounded-xl border"
               style={{
                 backgroundColor: 'var(--bg-card)',
                 borderColor: 'var(--border-subtle)',
+                boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)';
+                e.currentTarget.style.borderColor = 'var(--accent-primary-soft)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)';
+                e.currentTarget.style.borderColor = 'var(--border-subtle)';
               }}
             >
               <h3
