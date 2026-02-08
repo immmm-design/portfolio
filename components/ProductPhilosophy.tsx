@@ -49,28 +49,18 @@ function TiltCard({ principle, index, isInView }: { principle: { title: string; 
         rotateY,
         transformStyle: 'preserve-3d',
         perspective: 1000,
+        backgroundColor: 'var(--bg-card)',
+        borderColor: 'var(--border-subtle)',
+        boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
       }}
       className="p-6 rounded-xl border"
     >
-      <div
-        style={{
-          backgroundColor: 'var(--bg-card)',
-          borderColor: 'var(--border-subtle)',
-          boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-          borderWidth: '1px',
-          borderStyle: 'solid',
-          borderRadius: '0.75rem',
-          padding: '1.5rem',
-          transform: 'translateZ(20px)',
-        }}
-      >
-        <h3 className="text-xl font-bold mb-3" style={{ color: 'var(--text-main)' }}>
-          {principle.title}
-        </h3>
-        <p className="leading-relaxed" style={{ color: 'var(--text-muted)' }}>
-          {principle.description}
-        </p>
-      </div>
+      <h3 className="text-xl font-bold mb-3" style={{ color: 'var(--text-main)' }}>
+        {principle.title}
+      </h3>
+      <p className="leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+        {principle.description}
+      </p>
     </motion.div>
   );
 }

@@ -157,7 +157,7 @@ export default function Hero() {
               color: 'var(--hero-text-muted)',
             }}
           >
-            From Ukrainian swimming champion to U.S. boarding school to robotics engineer, my journey taught me to solve hard problems under pressure. I've spent 5+ years building physical products like NASA asteroid rovers, off-road vehicle systems, and consumer hardware while running a profitable IT consulting business. Now at Columbia studying Technology Management, I'm combining hands-on engineering depth with product strategy to lead teams building the next generation of tech products.
+            From Ukrainian swimming champion to U.S. boarding school to robotics engineer, my journey taught me to solve hard problems under pressure. I've spent 5+ years building physical products like NASA asteroid rovers, off-road vehicle systems, and consumer hardware while running a profitable IT consulting business. Now at Columbia University studying Technology Management, I'm combining hands-on engineering depth with product strategy to lead teams building the next generation of tech products.
           </p>
 
           {/* Location & Education Line */}
