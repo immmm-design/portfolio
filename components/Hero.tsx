@@ -169,7 +169,7 @@ export default function Hero() {
               color: 'var(--hero-text-muted)',
             }}
           >
-            New York, NY · Columbia University – M.S. Technology Management (&apos;26) · Arizona State University – B.S. Engineering (Robotics)
+            New York, NY · Columbia University – M.S. Technology Management (&apos;26) · B.S. Engineering, Robotics
           </p>
 
           {/* CTA Buttons */}
