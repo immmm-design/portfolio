@@ -83,9 +83,7 @@ export default function Projects() {
               <p className="text-sm font-medium mb-2" style={{ color: 'var(--text-main)' }}>
                 {project.role}
               </p>
-              <p className="text-sm mb-4" style={{ color: 'var(--text-muted)' }}>
-                {project.context.replace(/\s*[–-]\s*Arizona State University/g, '')}
-              </p>
+              <p className="text-sm mb-4" style={{ color: 'var(--text-muted)' }}>{project.context}</p>
 
               {/* Description */}
               <ul className="space-y-2 mb-6">

@@ -133,6 +133,7 @@ export default function About() {
               <p className="font-medium mt-3 mb-2" style={{ color: 'var(--text-main)' }}>
                 B.S. Engineering – Robotics
               </p>
+              <p className="text-sm" style={{ color: 'var(--text-muted)' }}>Arizona State University</p>
             </div>
 
             <div>

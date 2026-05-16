@@ -16,10 +16,15 @@ export default function Education() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-  // School logos. Omitted entries render without a logo.
+  // School logos and colors
   const schoolInfo: Record<string, { logo: string; width: number; height: number }> = {
     columbia: {
       logo: '/logos/columbia.jpg',
+      width: 100,
+      height: 100,
+    },
+    asu: {
+      logo: '/logos/asu.png',
       width: 100,
       height: 100,
     },
@@ -45,8 +50,7 @@ export default function Education() {
 
         <div className="space-y-8">
           {education.map((edu, index) => {
-            const info = schoolInfo[edu.id];
-            const showLogo = Boolean(info);
+            const info = schoolInfo[edu.id] || schoolInfo.asu;
             return (
               <motion.div
                 key={edu.id}
@@ -62,17 +66,15 @@ export default function Education() {
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-4">
                   <div className="flex items-start gap-6 flex-1">
                     {/* School Logo */}
-                    {showLogo && info && (
-                      <div className="flex-shrink-0">
-                        <Image
-                          src={info.logo}
-                          alt={edu.institution}
-                          width={info.width}
-                          height={info.height}
-                          className="object-contain"
-                        />
-                      </div>
-                    )}
+                    <div className="flex-shrink-0">
+                      <Image
+                        src={info.logo}
+                        alt={edu.institution}
+                        width={info.width}
+                        height={info.height}
+                        className="object-contain"
+                      />
+                    </div>
 
                     {/* Education Details */}
                     <div className="flex-1">
@@ -80,7 +82,7 @@ export default function Education() {
                         {edu.degree}
                       </h3>
                       <p className="text-lg font-medium mb-1" style={{ color: 'var(--text-main)' }}>
-                        {edu.institution.replace(/^Arizona State University,\s*/, '')}
+                        {edu.institution}
                       </p>
                       <p className="text-sm" style={{ color: 'var(--text-muted)' }}>{edu.location}</p>
                     </div>
@@ -95,7 +97,7 @@ export default function Education() {
                   </div>
                 </div>
 
-                <p className={`leading-relaxed ml-0 ${showLogo ? 'lg:ml-32' : ''}`} style={{ color: 'var(--text-muted)' }}>{edu.note}</p>
+                <p className="leading-relaxed ml-0 lg:ml-32" style={{ color: 'var(--text-muted)' }}>{edu.note}</p>
               </motion.div>
             );
           })}
