@@ -187,8 +187,7 @@ export default function Hero() {
               View My Work
             </button>
             <a
-              href="/resume/Ivan_Makarenko_Resume.pdf"
-              download
+              href="/resume"
               className="w-full sm:w-auto px-7 py-3 font-medium rounded-full transition-all hover:shadow-lg text-center"
               style={{
                 backgroundColor: 'transparent',
@@ -205,7 +204,7 @@ export default function Hero() {
                 e.currentTarget.style.color = 'var(--hero-accent)';
               }}
             >
-              Download Resume
+              View Resume
             </a>
           </div>
         </div>

@@ -39,4 +39,16 @@ export const projects: Project[] = [
       'Developed systems thinking by identifying patterns across industries (construction, legal, retail) and building reusable frameworks. Learned core PM skills in real-world setting: managing ambiguity, defining scope boundaries, saying no to feature creep, and focusing on outcomes (time saved, revenue enabled, downtime prevented) over outputs.',
     ],
   },
+  {
+    id: 'algo-trading',
+    title: 'Algorithmic Trading System',
+    role: 'System Architect & Developer',
+    context: 'Personal Project · Cloud-Deployed (2024 – Present)',
+    tags: ['Python', 'Cloud Infrastructure', 'Fintech'],
+    description: [
+      'Designed and deployed a fully automated trading system on Google Cloud Platform executing real-capital trades on BTC and ETH perpetual futures via live exchange APIs. System runs 24/7 without manual intervention.',
+      'Architected the full pipeline end-to-end: real-time market data ingestion, signal generation logic, risk management with position sizing and stop-loss rules, and automated order execution with idempotent retry handling. Treated trading as a product problem — defined success metrics, instrumented logging, and iterated based on live performance data.',
+      'Operating with real capital forced ruthless prioritization between feature velocity and reliability. Built monitoring, alerting, and kill-switch controls before adding strategy complexity. Reinforced PM instincts: ship the smallest reliable version first, then iterate against measurable outcomes.',
+    ],
+  },
 ];

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { siteConfig } from '@/data/config';
 import ThemeToggle from './ThemeToggle';
@@ -19,6 +20,8 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const pathname = usePathname();
+  const onHome = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,8 +32,9 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Scroll spy
+  // Scroll spy (home page only)
   useEffect(() => {
+    if (!onHome) return;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -48,9 +52,13 @@ export default function Navigation() {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [onHome]);
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!onHome) {
+      setIsMobileMenuOpen(false);
+      return;
+    }
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
@@ -65,6 +73,8 @@ export default function Navigation() {
     }
     setIsMobileMenuOpen(false);
   };
+
+  const linkHref = (href: string) => (onHome ? href : `/${href}`);
 
   return (
     <>
@@ -83,8 +93,8 @@ export default function Navigation() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo / Name */}
             <a
-              href="#hero"
-              onClick={(e) => scrollToSection(e, '#hero')}
+              href={onHome ? '#hero' : '/'}
+              onClick={(e) => onHome && scrollToSection(e, '#hero')}
               className="text-lg lg:text-xl font-semibold transition-colors"
               style={{ color: 'var(--text-main)' }}
             >
@@ -96,7 +106,7 @@ export default function Navigation() {
               {navLinks.map((link) => (
                 <a
                   key={link.name}
-                  href={link.href}
+                  href={linkHref(link.href)}
                   onClick={(e) => scrollToSection(e, link.href)}
                   className={`text-sm transition-all relative pb-1 ${
                     activeSection === link.href.slice(1)
@@ -125,15 +135,14 @@ export default function Navigation() {
               ))}
               <ThemeToggle />
               <a
-                href="/resume/Ivan_Makarenko_Resume.pdf"
-                download
+                href="/resume"
                 className="px-4 py-2 text-sm font-medium rounded-full transition-all hover:shadow-lg hover:-translate-y-0.5"
                 style={{
                   backgroundColor: 'var(--btn-primary-bg)',
                   color: 'var(--btn-primary-text)',
                 }}
               >
-                Download Resume
+                View Resume
               </a>
             </div>
 
@@ -189,7 +198,7 @@ export default function Navigation() {
               {navLinks.map((link) => (
                 <a
                   key={link.name}
-                  href={link.href}
+                  href={linkHref(link.href)}
                   onClick={(e) => scrollToSection(e, link.href)}
                   className={`block text-base transition-colors ${
                     activeSection === link.href.slice(1) ? 'font-bold' : 'font-medium'
@@ -205,15 +214,14 @@ export default function Navigation() {
                 </a>
               ))}
               <a
-                href="/resume/Ivan_Makarenko_Resume.pdf"
-                download
+                href="/resume"
                 className="block w-full px-4 py-2 text-center text-sm font-medium rounded-full transition-colors"
                 style={{
                   backgroundColor: 'var(--btn-primary-bg)',
                   color: 'var(--btn-primary-text)',
                 }}
               >
-                Download Resume
+                View Resume
               </a>
             </div>
           </div>
