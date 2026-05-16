@@ -18,7 +18,7 @@ export default function Experience() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   return (
-    <section id="experience" className="py-20 lg:py-32" style={{ backgroundColor: 'var(--bg-muted)' }} ref={ref}>
+    <section id="experience" className="py-14 lg:py-20" style={{ backgroundColor: 'var(--bg-muted)' }} ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 20, scale: 0.95 }}

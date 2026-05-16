@@ -95,7 +95,7 @@ export default function ProductPhilosophy() {
   return (
     <section
       id="philosophy"
-      className="py-20 lg:py-32"
+      className="py-14 lg:py-20"
       style={{ backgroundColor: 'var(--bg-main)' }}
       ref={ref}
     >

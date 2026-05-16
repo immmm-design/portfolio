@@ -11,7 +11,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="about" className="py-20 lg:py-32" style={{ backgroundColor: 'var(--bg-card)' }} ref={ref}>
+    <section id="about" className="py-14 lg:py-20" style={{ backgroundColor: 'var(--bg-card)' }} ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 20, scale: 0.95 }}

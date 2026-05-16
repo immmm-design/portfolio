@@ -10,7 +10,7 @@ export default function Projects() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="projects" className="py-20 lg:py-32" style={{ backgroundColor: 'var(--bg-page)' }} ref={ref}>
+    <section id="projects" className="py-14 lg:py-20" style={{ backgroundColor: 'var(--bg-page)' }} ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ export default function Projects() {
         </motion.p>
 
         {/* Project cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
