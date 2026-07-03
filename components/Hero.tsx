@@ -1,9 +1,40 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { useScroll, useTransform, motion } from 'framer-motion';
+import { useScroll, useTransform, motion, AnimatePresence } from 'framer-motion';
 import { siteConfig } from '@/data/config';
 import Image from 'next/image';
+
+const roles = ['Product Manager', 'Robotics Engineer', 'Entrepreneur'];
+
+function RotatingRoles() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((i) => (i + 1) % roles.length);
+    }, 2800);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <span className="inline-flex items-center justify-center" style={{ minWidth: '13ch' }}>
+      <AnimatePresence mode="wait">
+        <motion.span
+          key={roles[index]}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -12 }}
+          transition={{ duration: 0.35, ease: 'easeOut' }}
+          className="inline-block font-semibold"
+          style={{ color: 'var(--hero-accent)' }}
+        >
+          {roles[index]}
+        </motion.span>
+      </AnimatePresence>
+    </span>
+  );
+}
 
 export default function Hero() {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
@@ -122,7 +153,7 @@ export default function Hero() {
         }}
       >
         <div className="flex flex-col items-center justify-center text-center">
-          {/* Overline */}
+          {/* Overline with rotating role */}
           <div
             className="mb-4 tracking-wider uppercase"
             style={{
@@ -131,7 +162,7 @@ export default function Hero() {
               color: 'var(--hero-text-muted)',
             }}
           >
-            Product Manager · Robotics Engineer · Entrepreneur
+            <RotatingRoles />
           </div>
 
           {/* Main Headline */}
@@ -187,7 +218,8 @@ export default function Hero() {
               View My Work
             </button>
             <a
-              href="/resume"
+              href="/resume/Ivan_Makarenko_Resume.pdf"
+              download
               className="w-full sm:w-auto px-7 py-3 font-medium rounded-full transition-all hover:shadow-lg text-center"
               style={{
                 backgroundColor: 'transparent',
@@ -204,7 +236,7 @@ export default function Hero() {
                 e.currentTarget.style.color = 'var(--hero-accent)';
               }}
             >
-              View Resume
+              Download Resume
             </a>
           </div>
         </div>

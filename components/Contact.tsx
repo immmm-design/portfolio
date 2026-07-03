@@ -2,8 +2,59 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { siteConfig } from '@/data/config';
+
+function CopyableValue({ value, href }: { value: string; href: string }) {
+  const [copied, setCopied] = useState(false);
+
+  const copy = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    try {
+      await navigator.clipboard.writeText(value);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      window.location.href = href;
+    }
+  };
+
+  return (
+    <span className="inline-flex items-center gap-2">
+      <a
+        href={href}
+        className="font-medium transition-colors"
+        style={{ color: 'var(--accent-primary)' }}
+      >
+        {value}
+      </a>
+      <button
+        onClick={copy}
+        aria-label={`Copy ${value}`}
+        title="Copy to clipboard"
+        className="p-1 rounded-md transition-all hover:scale-110"
+        style={{ color: copied ? '#16a34a' : 'var(--text-muted)' }}
+      >
+        {copied ? (
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+          </svg>
+        ) : (
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3" />
+          </svg>
+        )}
+      </button>
+      <span
+        aria-live="polite"
+        className={`text-xs font-medium transition-opacity duration-200 ${copied ? 'opacity-100' : 'opacity-0'}`}
+        style={{ color: '#16a34a' }}
+      >
+        Copied!
+      </span>
+    </span>
+  );
+}
 
 export default function Contact() {
   const ref = useRef(null);
@@ -39,13 +90,7 @@ export default function Contact() {
                 <h3 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>
                   Email
                 </h3>
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="font-medium transition-colors"
-                  style={{ color: 'var(--accent-primary)' }}
-                >
-                  {siteConfig.email}
-                </a>
+                <CopyableValue value={siteConfig.email} href={`mailto:${siteConfig.email}`} />
               </div>
 
               <div className="text-left">
@@ -62,13 +107,10 @@ export default function Contact() {
                   <h3 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>
                     Phone
                   </h3>
-                  <a
+                  <CopyableValue
+                    value={siteConfig.phone}
                     href={`tel:${siteConfig.phone.replace(/\D/g, '')}`}
-                    className="font-medium transition-colors"
-                    style={{ color: 'var(--accent-primary)' }}
-                  >
-                    {siteConfig.phone}
-                  </a>
+                  />
                 </div>
               )}
 

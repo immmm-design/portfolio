@@ -135,14 +135,15 @@ export default function Navigation() {
               ))}
               <ThemeToggle />
               <a
-                href="/resume"
+                href="/resume/Ivan_Makarenko_Resume.pdf"
+                download
                 className="px-4 py-2 text-sm font-medium rounded-full transition-all hover:shadow-lg hover:-translate-y-0.5"
                 style={{
                   backgroundColor: 'var(--btn-primary-bg)',
                   color: 'var(--btn-primary-text)',
                 }}
               >
-                View Resume
+                Download Resume
               </a>
             </div>
 
@@ -214,14 +215,15 @@ export default function Navigation() {
                 </a>
               ))}
               <a
-                href="/resume"
+                href="/resume/Ivan_Makarenko_Resume.pdf"
+                download
                 className="block w-full px-4 py-2 text-center text-sm font-medium rounded-full transition-colors"
                 style={{
                   backgroundColor: 'var(--btn-primary-bg)',
                   color: 'var(--btn-primary-text)',
                 }}
               >
-                View Resume
+                Download Resume
               </a>
             </div>
           </div>

@@ -46,7 +46,7 @@ export default function Projects() {
                 scale: 1.02,
                 transition: { duration: 0.3, ease: 'easeOut' }
               }}
-              className="group rounded-2xl p-6 lg:p-8 cursor-pointer border"
+              className="group relative overflow-hidden rounded-2xl p-6 lg:p-8 cursor-pointer border"
               style={{
                 backgroundColor: 'var(--bg-card)',
                 borderColor: 'var(--border-subtle)',
@@ -60,7 +60,20 @@ export default function Projects() {
                 e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
                 e.currentTarget.style.borderColor = 'var(--border-subtle)';
               }}
+              onMouseMove={(e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                e.currentTarget.style.setProperty('--spot-x', `${e.clientX - rect.left}px`);
+                e.currentTarget.style.setProperty('--spot-y', `${e.clientY - rect.top}px`);
+              }}
             >
+              {/* Spotlight glow following cursor */}
+              <div
+                className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{
+                  background:
+                    'radial-gradient(320px circle at var(--spot-x, 50%) var(--spot-y, 50%), color-mix(in srgb, var(--accent-primary) 9%, transparent), transparent 70%)',
+                }}
+              />
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((tag) => (
