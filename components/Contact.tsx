@@ -74,7 +74,7 @@ export default function Contact() {
           </h2>
 
           <p className="text-lg mb-12" style={{ color: 'var(--text-muted)' }}>
-            Product roles, technical questions, or just robotics talk — my
+            Product roles, technical questions, or just robotics talk. My
             inbox is open.
           </p>
 

@@ -37,7 +37,7 @@ export default function Experience() {
           className="text-lg mb-12 lg:mb-16 max-w-3xl"
           style={{ color: 'var(--text-muted)' }}
         >
-          Automation, product development, consulting — every role came down
+          Automation, product development, consulting. Every role came down
           to the same job: make things work better.
         </motion.p>
 

@@ -44,7 +44,7 @@ export default function About() {
               </div>
               <div className="flex-1 leading-relaxed text-lg" style={{ color: 'var(--text-muted)' }}>
                 <p className="mb-4">
-                  I&apos;m a <strong style={{ color: 'var(--text-main)' }}>robotics engineer who ran his own business for five years</strong> — so I speak both languages: what&apos;s technically possible, and what customers will actually pay for.
+                  I&apos;m a <strong style={{ color: 'var(--text-main)' }}>robotics engineer who ran his own business for five years</strong>, so I speak both languages: what&apos;s technically possible, and what customers will actually pay for.
                 </p>
                 <p>
                   Now at <strong style={{ color: 'var(--text-main)' }}>Columbia University (M.S. Technology Management)</strong>, I&apos;m sharpening the product side: leading lifecycles, running cross-functional teams, shipping where hardware meets software.
@@ -58,19 +58,19 @@ export default function About() {
 
               <div className="pl-4 border-l-4" style={{ borderColor: 'var(--accent-primary)' }}>
                 <p className="mb-2" style={{ color: 'var(--text-muted)' }}>
-                  <strong style={{ color: 'var(--text-main)' }}>The Engineer:</strong> B.S. in Robotics, hands-on automation and electrical design — including a NASA Psyche mission capstone. I hold my own in any engineering room.
+                  <strong style={{ color: 'var(--text-main)' }}>The Engineer:</strong> B.S. in Robotics, hands-on automation and electrical design, including a NASA Psyche mission capstone. I hold my own in any engineering room.
                 </p>
               </div>
 
               <div className="pl-4 border-l-4" style={{ borderColor: 'var(--accent-primary)' }}>
                 <p className="mb-2" style={{ color: 'var(--text-muted)' }}>
-                  <strong style={{ color: 'var(--text-main)' }}>The Entrepreneur:</strong> Five years running my own IT venture. Real users, real constraints, real consequences — the best PM training there is.
+                  <strong style={{ color: 'var(--text-main)' }}>The Entrepreneur:</strong> Five years running my own IT venture. Real users, real constraints, real consequences. The best PM training there is.
                 </p>
               </div>
 
               <div className="pl-4 border-l-4" style={{ borderColor: 'var(--accent-primary)' }}>
                 <p className="mb-2" style={{ color: 'var(--text-muted)' }}>
-                  <strong style={{ color: 'var(--text-main)' }}>The Strategist:</strong> At Columbia, bridging both worlds — product strategy, digital transformation, agile leadership.
+                  <strong style={{ color: 'var(--text-main)' }}>The Strategist:</strong> At Columbia, bridging both worlds: product strategy, digital transformation, agile leadership.
                 </p>
               </div>
 

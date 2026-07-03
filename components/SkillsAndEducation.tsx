@@ -31,7 +31,7 @@ export default function SkillsAndEducation() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* LEFT — Skills */}
+          {/* LEFT: Skills */}
           <div>
             <motion.h2
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -68,20 +68,9 @@ export default function SkillsAndEducation() {
                   >
                     {group.title}
                   </h3>
-                  <div className="flex flex-wrap gap-1.5">
-                    {group.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-2.5 py-1 text-xs rounded-md"
-                        style={{
-                          backgroundColor: 'var(--bg-muted)',
-                          color: 'var(--text-main)',
-                        }}
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="text-sm leading-relaxed" style={{ color: 'var(--text-main)' }}>
+                    {group.skills.join(' · ')}
+                  </p>
                 </motion.div>
               ))}
             </div>
@@ -100,12 +89,12 @@ export default function SkillsAndEducation() {
                 {languages.join(' · ')}
               </span>
               <span className="text-xs" style={{ color: 'var(--text-muted)' }}>
-                — fluent in all three
+                (fluent in all three)
               </span>
             </motion.div>
           </div>
 
-          {/* RIGHT — Education */}
+          {/* RIGHT: Education */}
           <div id="education">
             <motion.h2
               initial={{ opacity: 0, y: 20, scale: 0.95 }}

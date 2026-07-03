@@ -188,7 +188,7 @@ export default function Hero() {
               color: 'var(--hero-text-muted)',
             }}
           >
-            Ukrainian swimming champion → U.S. boarding school → robotics engineer. Five years building things that actually shipped: NASA asteroid rovers, off-road vehicle systems, consumer hardware — plus a profitable consulting practice on the side. Now at Columbia University, turning engineering depth into product strategy.
+            Ukrainian swimming champion → U.S. boarding school → robotics engineer. Five years building things that actually shipped: NASA asteroid rovers, off-road vehicle systems, consumer hardware, plus a profitable consulting practice on the side. Now at Columbia University, turning engineering depth into product strategy.
           </p>
 
           {/* Location & Education Line */}

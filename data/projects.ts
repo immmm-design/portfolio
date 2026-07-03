@@ -47,7 +47,7 @@ export const projects: Project[] = [
     tags: ['Python', 'Cloud Infrastructure', 'Fintech'],
     description: [
       'Designed and deployed a fully automated trading system on Google Cloud Platform executing real-capital trades on BTC and ETH perpetual futures via live exchange APIs. System runs 24/7 without manual intervention.',
-      'Architected the full pipeline end-to-end: real-time market data ingestion, signal generation logic, risk management with position sizing and stop-loss rules, and automated order execution with idempotent retry handling. Treated trading as a product problem — defined success metrics, instrumented logging, and iterated based on live performance data.',
+      'Architected the full pipeline end-to-end: real-time market data ingestion, signal generation logic, risk management with position sizing and stop-loss rules, and automated order execution with idempotent retry handling. Treated trading as a product problem: defined success metrics, instrumented logging, and iterated based on live performance data.',
       'Operating with real capital forced ruthless prioritization between feature velocity and reliability. Built monitoring, alerting, and kill-switch controls before adding strategy complexity. Reinforced PM instincts: ship the smallest reliable version first, then iterate against measurable outcomes.',
     ],
   },

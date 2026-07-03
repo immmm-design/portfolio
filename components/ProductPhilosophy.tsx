@@ -73,7 +73,7 @@ export default function ProductPhilosophy() {
     {
       title: 'Start with Constraints, Not Features',
       description:
-        'On NASA Psyche, near-zero gravity and vacuum picked the design for us — springs beat hydraulics. The best solutions come from knowing what you can\'t do.',
+        'On NASA Psyche, near-zero gravity and vacuum picked the design for us: springs beat hydraulics. The best solutions come from knowing what you can\'t do.',
     },
     {
       title: 'Talk to Users Before Writing Specs',
@@ -83,7 +83,7 @@ export default function ProductPhilosophy() {
     {
       title: 'Prototype Fast, Iterate Faster',
       description:
-        'An Excel database built in days cut design cycle time 30% — before anyone invested in complex systems. Ship something real, then improve it.',
+        'An Excel database built in days cut design cycle time 30%, before anyone invested in complex systems. Ship something real, then improve it.',
     },
     {
       title: 'Measure What Matters',
