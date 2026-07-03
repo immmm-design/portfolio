@@ -73,22 +73,22 @@ export default function ProductPhilosophy() {
     {
       title: 'Start with Constraints, Not Features',
       description:
-        'NASA Psyche required designing for near-zero gravity and vacuum before thinking about features. Constraints drove the decision to use weight distribution and spring systems instead of hydraulics. The best solutions emerge when you understand what you cannot do.',
+        'On NASA Psyche, near-zero gravity and vacuum picked the design for us — springs beat hydraulics. The best solutions come from knowing what you can\'t do.',
     },
     {
       title: 'Talk to Users Before Writing Specs',
       description:
-        'IT consulting taught me that clients often describe solutions when they really need you to understand their problems. A request for "better software" usually means "I\'m wasting 3 hours per day on manual tasks." Always dig deeper to find the real pain.',
+        'Clients ask for "better software" when they mean "I lose 3 hours a day to manual work." Dig past the request to the real pain.',
     },
     {
       title: 'Prototype Fast, Iterate Faster',
       description:
-        'At ADD, building an Excel database for vehicle trims in days proved the concept before investing in complex systems. It reduced cycle time by 30% and got buy-in from manufacturing teams. Ship something real, learn from it, then improve.',
+        'An Excel database built in days cut design cycle time 30% — before anyone invested in complex systems. Ship something real, then improve it.',
     },
     {
       title: 'Measure What Matters',
       description:
-        'For the Solar Hat, positive survey feedback validated demand, but the real metric would be "heat stroke incidents prevented." Always focus on outcomes, not outputs. If you can\'t measure impact, you can\'t prove value.',
+        'Survey praise validated the Solar Hat; "heat strokes prevented" is the metric that matters. Outcomes over outputs, always.',
     },
   ];
 

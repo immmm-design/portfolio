@@ -3,7 +3,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Image from 'next/image';
-import { skillGroups } from '@/data/skills';
+import { skillGroups, languages } from '@/data/skills';
 import { education } from '@/data/education';
 
 function formatDate(dateStr: string): string {
@@ -49,20 +49,22 @@ export default function SkillsAndEducation() {
               className="text-base mb-8"
               style={{ color: 'var(--text-muted)' }}
             >
-              Technical depth across software, hardware, and systems.
+              Software, hardware, and everything between.
             </motion.p>
 
-            <div className="space-y-5">
+            <div className="grid sm:grid-cols-2 gap-5">
               {skillGroups.map((group, index) => (
                 <motion.div
                   key={group.title}
                   initial={{ opacity: 0, y: 15 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.15 + index * 0.06 }}
+                  className="rounded-xl border p-4"
+                  style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border-subtle)' }}
                 >
                   <h3
-                    className="text-sm font-semibold uppercase tracking-wide mb-2.5"
-                    style={{ color: 'var(--text-muted)' }}
+                    className="text-sm font-bold mb-3"
+                    style={{ color: 'var(--accent-primary)' }}
                   >
                     {group.title}
                   </h3>
@@ -70,10 +72,9 @@ export default function SkillsAndEducation() {
                     {group.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="px-2.5 py-1 text-xs rounded-md border transition-colors"
+                        className="px-2.5 py-1 text-xs rounded-md"
                         style={{
-                          backgroundColor: 'var(--bg-card)',
-                          borderColor: 'var(--border-subtle)',
+                          backgroundColor: 'var(--bg-muted)',
                           color: 'var(--text-main)',
                         }}
                       >
@@ -84,6 +85,24 @@ export default function SkillsAndEducation() {
                 </motion.div>
               ))}
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.45 }}
+              className="mt-5 flex items-center gap-3 rounded-xl border p-4"
+              style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border-subtle)' }}
+            >
+              <span className="text-sm font-bold" style={{ color: 'var(--accent-primary)' }}>
+                Languages
+              </span>
+              <span className="text-sm" style={{ color: 'var(--text-main)' }}>
+                {languages.join(' · ')}
+              </span>
+              <span className="text-xs" style={{ color: 'var(--text-muted)' }}>
+                — fluent in all three
+              </span>
+            </motion.div>
           </div>
 
           {/* RIGHT — Education */}
@@ -104,7 +123,7 @@ export default function SkillsAndEducation() {
               className="text-base mb-8"
               style={{ color: 'var(--text-muted)' }}
             >
-              A path from boarding school through engineering to product strategy.
+              Boarding school → engineering → product strategy.
             </motion.p>
 
             <div className="space-y-4">

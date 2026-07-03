@@ -29,8 +29,8 @@ export default function Projects() {
           className="text-lg mb-12 lg:mb-16 max-w-3xl"
           style={{ color: 'var(--text-muted)' }}
         >
-          A selection of hands-on projects where I combined engineering expertise,
-          product thinking, and entrepreneurial drive to deliver real-world solutions.
+          Asteroid rovers, wearables, a trading system, a consulting practice.
+          All shipped, all taught me something.
         </motion.p>
 
         {/* Project cards */}

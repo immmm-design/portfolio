@@ -174,7 +174,7 @@ export default function Hero() {
               color: 'var(--hero-text-main)',
             }}
           >
-            I help teams ship products faster by bridging technical expertise with strategy
+            I turn technical complexity into products that ship
           </h1>
 
           {/* Subheadline / Bio */}
@@ -188,7 +188,7 @@ export default function Hero() {
               color: 'var(--hero-text-muted)',
             }}
           >
-            From Ukrainian swimming champion to U.S. boarding school to robotics engineer, my journey taught me to solve hard problems under pressure. I've spent 5+ years building physical products like NASA asteroid rovers, off-road vehicle systems, and consumer hardware while running a profitable IT consulting business. Now at Columbia University studying Technology Management, I'm combining hands-on engineering depth with product strategy to lead teams building the next generation of tech products.
+            Ukrainian swimming champion → U.S. boarding school → robotics engineer. Five years building things that actually shipped: NASA asteroid rovers, off-road vehicle systems, consumer hardware — plus a profitable consulting practice on the side. Now at Columbia University, turning engineering depth into product strategy.
           </p>
 
           {/* Location & Education Line */}

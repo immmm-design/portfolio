@@ -74,8 +74,8 @@ export default function Contact() {
           </h2>
 
           <p className="text-lg mb-12" style={{ color: 'var(--text-muted)' }}>
-            If you&apos;re interested in product roles, technical work, or just
-            want to talk about robotics and automation, feel free to reach out.
+            Product roles, technical questions, or just robotics talk — my
+            inbox is open.
           </p>
 
           <motion.div

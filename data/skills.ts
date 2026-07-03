@@ -2,60 +2,35 @@ import { SkillGroup } from '@/types';
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: 'Product & Systems Thinking',
+    title: 'Product',
     skills: [
-      'Requirements gathering & problem framing',
-      'Process mapping and workflow optimization',
-      'Cross-functional collaboration and documentation',
-      'Data-driven iteration and tracking',
+      'Problem framing',
+      'Process mapping',
+      'Roadmapping',
+      'Cross-functional leadership',
+      'Data-driven iteration',
+      'Agile & Scrum',
     ],
   },
   {
-    title: 'Programming & Software',
+    title: 'Software & Data',
+    skills: ['Python', 'C/C++', 'SQL', 'MATLAB', 'Git', 'Tableau', 'Excel (advanced)'],
+  },
+  {
+    title: 'Hardware & Robotics',
     skills: [
-      'Python',
-      'C/C++',
-      'MATLAB',
-      'SQL',
-      'Git / GitHub',
-      'Tableau',
-      'Basic data analysis & visualization',
+      'Microcontrollers',
+      'PCB design',
+      'Sensor integration',
+      'Embedded C',
+      'Arduino',
+      'Automation & RPA',
     ],
   },
   {
-    title: 'Embedded & Automation',
-    skills: [
-      'Microcontrollers (8-bit, 16-bit, 32-bit)',
-      'PCB design & sensor integration',
-      'SPI/I2C communication',
-      'Embedded C & robotic systems',
-      'Automation engineering & RPA concepts',
-    ],
-  },
-  {
-    title: 'CAD & Electrical Design',
-    skills: [
-      'Electrical circuit design & schematic capture',
-      'Revit',
-      'AutoCAD',
-      'SolidWorks',
-      'Cadence',
-      'Design optimization and mechanical assembly support',
-    ],
-  },
-  {
-    title: 'Tools & Platforms',
-    skills: [
-      'Windows / Linux',
-      'Visual Studio',
-      'VS Code',
-      'Arduino IDE',
-      'Excel (advanced)',
-      'Multimeters and basic lab tools',
-    ],
-  },
-  {
-    title: 'Languages',
-    skills: ['English (Fluent)', 'Russian (Fluent)', 'Ukrainian (Fluent)'],
+    title: 'CAD & Design',
+    skills: ['SolidWorks', 'AutoCAD', 'Revit', 'Cadence', 'Circuit design'],
   },
 ];
+
+export const languages = ['English', 'Russian', 'Ukrainian'];

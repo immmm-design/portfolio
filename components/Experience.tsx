@@ -37,9 +37,8 @@ export default function Experience() {
           className="text-lg mb-12 lg:mb-16 max-w-3xl"
           style={{ color: 'var(--text-muted)' }}
         >
-          I&apos;ve worked across automation engineering, new product
-          development, and IT systems consulting. In each role, I focus on
-          improving workflows, reliability, and clarity.
+          Automation, product development, consulting — every role came down
+          to the same job: make things work better.
         </motion.p>
 
         <div className="space-y-8 lg:space-y-12">

@@ -44,38 +44,38 @@ export default function About() {
               </div>
               <div className="flex-1 leading-relaxed text-lg" style={{ color: 'var(--text-muted)' }}>
                 <p className="mb-4">
-                  As a <strong style={{ color: 'var(--text-main)' }}>Robotics Engineer with 5+ years of entrepreneurial experience</strong>, I have a rare combination of deep technical literacy and customer-centric business acumen. I specialize in aligning technical feasibility with business viability, ensuring that engineering innovation translates directly into market value.
+                  I&apos;m a <strong style={{ color: 'var(--text-main)' }}>robotics engineer who ran his own business for five years</strong> — so I speak both languages: what&apos;s technically possible, and what customers will actually pay for.
                 </p>
                 <p>
-                  Currently pursuing my <strong style={{ color: 'var(--text-main)' }}>M.S. in Technology Management at Columbia University</strong>, I am refining my ability to lead product lifecycles, manage cross-functional teams, and drive innovation in hardware-software environments.
+                  Now at <strong style={{ color: 'var(--text-main)' }}>Columbia University (M.S. Technology Management)</strong>, I&apos;m sharpening the product side: leading lifecycles, running cross-functional teams, shipping where hardware meets software.
                 </p>
               </div>
             </div>
 
             {/* Three pillars */}
             <div className="space-y-4 leading-relaxed text-lg" style={{ color: 'var(--text-muted)' }}>
-              <p className="font-semibold" style={{ color: 'var(--text-main)' }}>My journey has three main pillars:</p>
+              <p className="font-semibold" style={{ color: 'var(--text-main)' }}>Three sides to the story:</p>
 
               <div className="pl-4 border-l-4" style={{ borderColor: 'var(--accent-primary)' }}>
                 <p className="mb-2" style={{ color: 'var(--text-muted)' }}>
-                  <strong style={{ color: 'var(--text-main)' }}>The Engineer:</strong> With a B.S. in Robotics, I have hands-on experience in automation and electrical design (including the NASA Psyche Mission Capstone). I can speak the language of engineering teams, vetting technical feasibility in Python, C++, and SQL.
+                  <strong style={{ color: 'var(--text-main)' }}>The Engineer:</strong> B.S. in Robotics, hands-on automation and electrical design — including a NASA Psyche mission capstone. I hold my own in any engineering room.
                 </p>
               </div>
 
               <div className="pl-4 border-l-4" style={{ borderColor: 'var(--accent-primary)' }}>
                 <p className="mb-2" style={{ color: 'var(--text-muted)' }}>
-                  <strong style={{ color: 'var(--text-main)' }}>The Entrepreneur:</strong> For over 5 years, I ran my own IT services venture. This taught me the fundamentals of Product Management: understanding user pain points, managing ambiguity, and delivering value under tight constraints.
+                  <strong style={{ color: 'var(--text-main)' }}>The Entrepreneur:</strong> Five years running my own IT venture. Real users, real constraints, real consequences — the best PM training there is.
                 </p>
               </div>
 
               <div className="pl-4 border-l-4" style={{ borderColor: 'var(--accent-primary)' }}>
                 <p className="mb-2" style={{ color: 'var(--text-muted)' }}>
-                  <strong style={{ color: 'var(--text-main)' }}>The Strategist:</strong> At Columbia, I am bridging these worlds, focusing on Product Strategy, Digital Transformation, and Agile Leadership.
+                  <strong style={{ color: 'var(--text-main)' }}>The Strategist:</strong> At Columbia, bridging both worlds — product strategy, digital transformation, agile leadership.
                 </p>
               </div>
 
               <p className="mt-6 font-medium" style={{ color: 'var(--text-main)' }}>
-                I am actively seeking <strong>Summer 2026 Internships</strong> in Technical Product Management, Innovation, or R&D Operations where I can translate technical complexity into business impact.
+                Open to <strong>Summer 2026 internships</strong> in Technical PM, Innovation, or R&D Operations.
               </p>
 
               <div className="mt-6 p-4 rounded-xl border shadow-sm" style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border-subtle)' }}>
@@ -112,7 +112,7 @@ export default function About() {
 
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>
-                Seeking
+                Open to
               </h3>
               <p className="font-medium" style={{ color: 'var(--text-main)' }}>
                 Summer 2026 Internships
