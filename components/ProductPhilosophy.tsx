@@ -73,7 +73,7 @@ export default function ProductPhilosophy() {
     {
       title: 'Understand',
       description:
-        'Clarify the customer, operational, and technical problem before proposing anything. At SourceOne, that means turning ambiguous U.S. customer requirements into concrete questions for factory engineers in China.',
+        'Clarify the customer, operational, and technical problem before proposing anything. At SourceOne, that meant turning ambiguous U.S. customer requirements into concrete questions for factory engineers in China.',
     },
     {
       title: 'Define',

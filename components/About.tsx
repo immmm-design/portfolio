@@ -44,7 +44,7 @@ export default function About() {
                 I&apos;m a <strong style={{ color: 'var(--text-main)' }}>robotics engineer who moved into product</strong> because the hardest problems I kept running into were not technical. They were about deciding what to build, for whom, and under which constraints.
               </p>
               <p>
-                Right now I&apos;m at <strong style={{ color: 'var(--text-main)' }}>SourceOne in Guangdong, China</strong>, evaluating automated factories and supporting product validation for U.S. hardware customers, while finishing my M.S. in Technology Management at Columbia University.
+                This past summer I worked at <strong style={{ color: 'var(--text-main)' }}>SourceOne in Guangdong, China</strong>, evaluating automated factories and supporting product validation for U.S. hardware customers. Now I&apos;m back in New York, finishing my M.S. in Technology Management at Columbia University.
               </p>
             </div>
           </div>

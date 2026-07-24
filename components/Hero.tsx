@@ -157,7 +157,7 @@ export default function Hero() {
               color: 'var(--hero-text-muted)',
             }}
           >
-            Robotics engineer turned technical PM. This summer I&apos;m at SourceOne in Guangdong, China, evaluating automated factories and supporting product validation for U.S. hardware customers. I finish my M.S. in Technology Management at Columbia University in December 2026.
+            Robotics engineer turned technical PM. Most recently at SourceOne in Guangdong, China, where I evaluated automated factories and supported product validation for U.S. hardware customers. I finish my M.S. in Technology Management at Columbia University in December 2026.
           </p>
 
           {/* Location line */}
