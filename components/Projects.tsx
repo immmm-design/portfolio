@@ -126,6 +126,8 @@ export default function Projects() {
               {project.link && (
                 <a
                   href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center text-sm font-medium"
                   style={{ color: 'var(--accent-primary)' }}
                 >

@@ -26,6 +26,8 @@ export const projects: Project[] = [
       'Scoped the MVP around three jobs: structured benefit parsing, monthly action prioritization, and purchase-category recommendations, with a privacy-first approach that avoids handling raw card data. Built on Supabase.',
       'Next steps: evaluation against real issuer benefit guides and user testing before any go/no-go decision on a public release.',
     ],
+    link: 'https://perk-pulse-zeta.vercel.app/',
+    linkText: 'View Live Prototype',
   },
   {
     id: 'nasa-psyche',
