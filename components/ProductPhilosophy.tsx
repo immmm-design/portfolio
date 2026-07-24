@@ -88,7 +88,7 @@ export default function ProductPhilosophy() {
     {
       title: 'Deliver',
       description:
-        'Coordinate product, engineering, and manufacturing around clear decisions. At Addictive Desert Designs, a 50-model fitment database became the shared reference that cut design cycles by roughly 30%.',
+        'Coordinate product, engineering, and manufacturing around clear decisions. At Addictive Desert Designs, a 50-model compatibility database became the shared reference that cut design cycles by roughly 30%.',
     },
   ];
 
@@ -96,7 +96,7 @@ export default function ProductPhilosophy() {
     <section
       id="philosophy"
       className="py-14 lg:py-20"
-      style={{ backgroundColor: 'var(--bg-main)' }}
+      style={{ backgroundColor: 'var(--bg-page)' }}
       ref={ref}
     >
       <div className="max-w-5xl mx-auto px-6 lg:px-8">

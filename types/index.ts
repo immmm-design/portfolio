@@ -55,6 +55,3 @@ export interface SiteConfig {
   animationsEnabled: boolean;
 }
 
-export interface HeroHighlight {
-  text: string;
-}

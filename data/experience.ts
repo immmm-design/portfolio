@@ -34,7 +34,7 @@ export const experiences: Experience[] = [
     startDate: '2023-06',
     endDate: '2023-08',
     bullets: [
-      'Built a vehicle trim and fitment database covering 50+ truck models, helping shorten design cycles by roughly 30% and accelerate development of new off-road components.',
+      'Built a vehicle trim and compatibility database covering 50+ truck models, helping shorten design cycles by roughly 30% and accelerate development of new off-road components.',
       'Developed off-road components from vehicle laser scanning and SolidWorks CAD through robotic assembly and testing, then partnered with OTC engineers to commission two robotic welding systems for expanded production capacity.',
     ],
   },

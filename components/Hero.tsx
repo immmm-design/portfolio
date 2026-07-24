@@ -131,7 +131,7 @@ export default function Hero() {
               color: 'var(--hero-accent)',
             }}
           >
-            Technical Product Manager · Robotics, Hardware &amp; Manufacturing
+            Technical Product Manager · Robotics · Hardware &amp; Manufacturing
           </div>
 
           {/* Main Headline */}
