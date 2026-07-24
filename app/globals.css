@@ -56,6 +56,11 @@
   --hero-accent: #4e8ef7;
 }
 
+/* Global scale: ~94% of default (15px root) for denser, easier reading */
+html {
+  font-size: 93.75%;
+}
+
 * {
   scroll-behavior: smooth;
 }

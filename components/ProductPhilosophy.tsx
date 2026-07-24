@@ -78,7 +78,7 @@ export default function ProductPhilosophy() {
     {
       title: 'Define',
       description:
-        'Translate needs into requirements, constraints, and success metrics. FoldRide Pro went from rider pain points to product requirements, system architecture, and factory-ready STEP files.',
+        'Translate needs into requirements, constraints, and success metrics. FoldRide Pro went from user needs to product requirements, architecture decisions, and technical documentation for engineering review.',
     },
     {
       title: 'Validate',

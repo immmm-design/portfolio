@@ -30,7 +30,7 @@ export default function Projects() {
           style={{ color: 'var(--text-muted)' }}
         >
           A patent-pending hardware product, an AI prototype, and an asteroid
-          rover capstone. Each one labeled with its honest status.
+          rover capstone.
         </motion.p>
 
         {/* Project cards */}
@@ -46,7 +46,7 @@ export default function Projects() {
                 scale: 1.02,
                 transition: { duration: 0.3, ease: 'easeOut' }
               }}
-              className="group relative overflow-hidden rounded-2xl p-6 lg:p-8 cursor-pointer border"
+              className="group relative overflow-hidden rounded-2xl p-6 lg:p-8 cursor-pointer border flex flex-col h-full"
               style={{
                 backgroundColor: 'var(--bg-card)',
                 borderColor: 'var(--border-subtle)',
@@ -109,7 +109,7 @@ export default function Projects() {
               )}
 
               {/* Description */}
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-2 mb-6 flex-1">
                 {project.description.map((desc, descIndex) => (
                   <li
                     key={descIndex}
@@ -128,7 +128,7 @@ export default function Projects() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-sm font-medium"
+                  className="inline-flex items-center text-sm font-medium mt-auto self-start"
                   style={{ color: 'var(--accent-primary)' }}
                 >
                   {project.linkText || 'Learn more'}
