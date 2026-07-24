@@ -14,9 +14,17 @@ export interface Project {
   role: string;
   context: string;
   tags: string[];
+  status?: string;
   description: string[];
   link?: string;
   linkText?: string;
+}
+
+export interface MiniProject {
+  id: string;
+  title: string;
+  description: string;
+  tags: string[];
 }
 
 export interface SkillGroup {

@@ -18,10 +18,10 @@ export default function Home() {
       <Navigation />
       <Hero />
       <StatsBand />
-      <About />
-      <ProductPhilosophy />
-      <Experience />
       <Projects />
+      <Experience />
+      <ProductPhilosophy />
+      <About />
       <SkillsAndEducation />
       <Contact />
       <Footer />

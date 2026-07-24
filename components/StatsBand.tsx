@@ -5,10 +5,10 @@ import { useRef } from 'react';
 import AnimatedCounter from './AnimatedCounter';
 
 const stats = [
-  { target: 5, suffix: '+', label: 'Years shipping products' },
-  { target: 20, suffix: '+', label: 'Consulting clients' },
-  { target: 25, suffix: '%', label: 'Error rate cut at Stantec' },
-  { target: 100, suffix: '%', label: 'Client retention' },
+  { target: 10, suffix: '', label: 'Automated factories evaluated in China' },
+  { target: 30, suffix: '%', label: 'Faster design cycles at ADD' },
+  { target: 50, suffix: '+', label: 'Truck models in fitment database' },
+  { target: 12, suffix: '', label: 'Infrastructure projects supported at Stantec' },
 ];
 
 export default function StatsBand() {

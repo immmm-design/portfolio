@@ -71,24 +71,24 @@ export default function ProductPhilosophy() {
 
   const principles = [
     {
-      title: 'Start with Constraints, Not Features',
+      title: 'Understand',
       description:
-        'On NASA Psyche, near-zero gravity and vacuum picked the design for us: springs beat hydraulics. The best solutions come from knowing what you can\'t do.',
+        'Clarify the customer, operational, and technical problem before proposing anything. At SourceOne, that means turning ambiguous U.S. customer requirements into concrete questions for factory engineers in China.',
     },
     {
-      title: 'Talk to Users Before Writing Specs',
+      title: 'Define',
       description:
-        'Clients ask for "better software" when they mean "I lose 3 hours a day to manual work." Dig past the request to the real pain.',
+        'Translate needs into requirements, constraints, and success metrics. FoldRide Pro went from rider pain points to product requirements, system architecture, and factory-ready STEP files.',
     },
     {
-      title: 'Prototype Fast, Iterate Faster',
+      title: 'Validate',
       description:
-        'An Excel database built in days cut design cycle time 30%, before anyone invested in complex systems. Ship something real, then improve it.',
+        'Test assumptions with prototypes, engineering reviews, and expert feedback. On the NASA Psyche capstone, mentor review killed our hydraulic design; the vacuum-compatible spring system came out of that loop.',
     },
     {
-      title: 'Measure What Matters',
+      title: 'Deliver',
       description:
-        'Survey praise validated the Solar Hat; "heat strokes prevented" is the metric that matters. Outcomes over outputs, always.',
+        'Coordinate product, engineering, and manufacturing around clear decisions. At Addictive Desert Designs, a 50-model fitment database became the shared reference that cut design cycles by roughly 30%.',
     },
   ];
 
@@ -107,7 +107,7 @@ export default function ProductPhilosophy() {
           className="text-3xl lg:text-5xl font-bold mb-6"
           style={{ color: 'var(--text-main)' }}
         >
-          How I Approach Products
+          How I Work
         </motion.h2>
 
         <motion.p
@@ -117,8 +117,7 @@ export default function ProductPhilosophy() {
           className="text-xl mb-12 lg:mb-16 leading-relaxed"
           style={{ color: 'var(--text-muted)' }}
         >
-          Great products start with understanding the problem, not falling in love with the solution. My
-          approach combines engineering rigor with entrepreneurial pragmatism.
+          Four stages, each grounded in a real project.
         </motion.p>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -127,16 +126,6 @@ export default function ProductPhilosophy() {
           ))}
         </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-lg mt-12 leading-relaxed"
-          style={{ color: 'var(--text-muted)' }}
-        >
-          This approach has helped me ship products from NASA asteroid rovers to consumer hardware while
-          running a profitable business. I bring this same thinking to every product challenge.
-        </motion.p>
       </div>
     </section>
   );

@@ -44,46 +44,22 @@ export default function About() {
               </div>
               <div className="flex-1 leading-relaxed text-lg" style={{ color: 'var(--text-muted)' }}>
                 <p className="mb-4">
-                  I&apos;m a <strong style={{ color: 'var(--text-main)' }}>robotics engineer who ran his own business for five years</strong>, so I speak both languages: what&apos;s technically possible, and what customers will actually pay for.
+                  I&apos;m a <strong style={{ color: 'var(--text-main)' }}>robotics engineer who moved into product</strong> because the hardest problems I kept running into were not technical. They were about deciding what to build, for whom, and under which constraints.
                 </p>
                 <p>
-                  Now at <strong style={{ color: 'var(--text-main)' }}>Columbia University (M.S. Technology Management)</strong>, I&apos;m sharpening the product side: leading lifecycles, running cross-functional teams, shipping where hardware meets software.
+                  Right now I&apos;m at <strong style={{ color: 'var(--text-main)' }}>SourceOne in Guangdong, China</strong>, evaluating automated factories and supporting product validation for U.S. hardware customers, while finishing my M.S. in Technology Management at Columbia University.
                 </p>
               </div>
             </div>
 
-            {/* Three pillars */}
             <div className="space-y-4 leading-relaxed text-lg" style={{ color: 'var(--text-muted)' }}>
-              <p className="font-semibold" style={{ color: 'var(--text-main)' }}>Three sides to the story:</p>
-
-              <div className="pl-4 border-l-4" style={{ borderColor: 'var(--accent-primary)' }}>
-                <p className="mb-2" style={{ color: 'var(--text-muted)' }}>
-                  <strong style={{ color: 'var(--text-main)' }}>The Engineer:</strong> B.S. in Robotics, hands-on automation and electrical design, including a NASA Psyche mission capstone. I hold my own in any engineering room.
-                </p>
-              </div>
-
-              <div className="pl-4 border-l-4" style={{ borderColor: 'var(--accent-primary)' }}>
-                <p className="mb-2" style={{ color: 'var(--text-muted)' }}>
-                  <strong style={{ color: 'var(--text-main)' }}>The Entrepreneur:</strong> Five years running my own IT venture. Real users, real constraints, real consequences. The best PM training there is.
-                </p>
-              </div>
-
-              <div className="pl-4 border-l-4" style={{ borderColor: 'var(--accent-primary)' }}>
-                <p className="mb-2" style={{ color: 'var(--text-muted)' }}>
-                  <strong style={{ color: 'var(--text-main)' }}>The Strategist:</strong> At Columbia, bridging both worlds: product strategy, digital transformation, agile leadership.
-                </p>
-              </div>
-
-              <p className="mt-6 font-medium" style={{ color: 'var(--text-main)' }}>
-                Open to <strong>Summer 2026 internships</strong> in Technical PM, Innovation, or R&D Operations.
+              <p>
+                My focus is <strong style={{ color: 'var(--text-main)' }}>technical product management for robotics, hardware, and AI-enabled physical products</strong>. The through-line in my work is the full chain from customer requirements to engineering decisions to manufacturing reality: FoldRide Pro from user needs to factory-ready files, a NASA Psyche capstone from constraints to tested prototype, and factory evaluations from customer specs to supplier decisions.
               </p>
 
-              <div className="mt-6 p-4 rounded-xl border shadow-sm" style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border-subtle)' }}>
-                <p className="text-sm font-bold mb-2" style={{ color: 'var(--text-main)' }}>Toolkit:</p>
-                <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
-                  Robotics | Product Lifecycle Management (PLM) | Market Research | Python & SQL | Agile & Scrum
-                </p>
-              </div>
+              <p className="text-base" style={{ color: 'var(--text-muted)' }}>
+                Off the clock: Ukrainian, former national-level swimmer, educated and employed across three countries.
+              </p>
             </div>
           </motion.div>
 
@@ -103,10 +79,13 @@ export default function About() {
 
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>
-                Current Focus
+                Now
               </h3>
               <p className="font-medium" style={{ color: 'var(--text-main)' }}>
-                Technical Product Management
+                Technical PM Intern, SourceOne
+              </p>
+              <p className="text-sm mt-1" style={{ color: 'var(--text-muted)' }}>
+                Guangdong, China
               </p>
             </div>
 
@@ -115,10 +94,10 @@ export default function About() {
                 Open to
               </h3>
               <p className="font-medium" style={{ color: 'var(--text-main)' }}>
-                Summer 2026 Internships
+                Full-Time Technical PM Roles
               </p>
               <p className="text-sm mt-1" style={{ color: 'var(--text-muted)' }}>
-                Technical PM, Innovation, R&D Operations
+                From December 2026 · Robotics, Hardware, AI Products
               </p>
             </div>
 

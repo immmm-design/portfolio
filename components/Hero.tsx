@@ -1,40 +1,9 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { useScroll, useTransform, motion, AnimatePresence } from 'framer-motion';
+import { useScroll, useTransform, motion } from 'framer-motion';
 import { siteConfig } from '@/data/config';
 import Image from 'next/image';
-
-const roles = ['Product Manager', 'Robotics Engineer', 'Entrepreneur'];
-
-function RotatingRoles() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((i) => (i + 1) % roles.length);
-    }, 2800);
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <span className="inline-flex items-center justify-center" style={{ minWidth: '13ch' }}>
-      <AnimatePresence mode="wait">
-        <motion.span
-          key={roles[index]}
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -12 }}
-          transition={{ duration: 0.35, ease: 'easeOut' }}
-          className="inline-block font-semibold"
-          style={{ color: 'var(--hero-accent)' }}
-        >
-          {roles[index]}
-        </motion.span>
-      </AnimatePresence>
-    </span>
-  );
-}
 
 export default function Hero() {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
@@ -153,16 +122,16 @@ export default function Hero() {
         }}
       >
         <div className="flex flex-col items-center justify-center text-center">
-          {/* Overline with rotating role */}
+          {/* Overline: primary role label */}
           <div
-            className="mb-4 tracking-wider uppercase"
+            className="mb-4 tracking-wider uppercase font-semibold"
             style={{
               fontSize: '0.875rem',
               letterSpacing: '0.08em',
-              color: 'var(--hero-text-muted)',
+              color: 'var(--hero-accent)',
             }}
           >
-            <RotatingRoles />
+            Technical Product Manager · Robotics, Hardware &amp; Manufacturing
           </div>
 
           {/* Main Headline */}
@@ -174,7 +143,7 @@ export default function Hero() {
               color: 'var(--hero-text-main)',
             }}
           >
-            I turn technical complexity into products that ship
+            I turn customer needs and engineering constraints into manufacturable products
           </h1>
 
           {/* Subheadline / Bio */}
@@ -188,10 +157,10 @@ export default function Hero() {
               color: 'var(--hero-text-muted)',
             }}
           >
-            Ukrainian swimming champion → U.S. boarding school → robotics engineer. Five years building things that actually shipped: NASA asteroid rovers, off-road vehicle systems, consumer hardware, plus a profitable consulting practice on the side. Now at Columbia University, turning engineering depth into product strategy.
+            Robotics engineer turned technical PM. This summer I&apos;m at SourceOne in Guangdong, China, evaluating automated factories and supporting product validation for U.S. hardware customers. I finish my M.S. in Technology Management at Columbia University in December 2026.
           </p>
 
-          {/* Location & Education Line */}
+          {/* Location line */}
           <p
             className="mb-6"
             style={{
@@ -200,7 +169,7 @@ export default function Hero() {
               color: 'var(--hero-text-muted)',
             }}
           >
-            New York, NY · Columbia University – M.S. Technology Management (&apos;26) · B.S. Engineering, Robotics
+            New York, NY · Open to relocation
           </p>
 
           {/* CTA Buttons */}
@@ -239,6 +208,20 @@ export default function Hero() {
               Download Resume
             </a>
           </div>
+
+          {/* LinkedIn link */}
+          <a
+            href={siteConfig.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium transition-opacity hover:opacity-80"
+            style={{ color: 'var(--hero-text-muted)' }}
+          >
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-3.37-4-3.11-4 0v5.6h-3v-11h3v1.76c1.4-2.59 7-2.78 7 2.48v6.76z" />
+            </svg>
+            LinkedIn
+          </a>
         </div>
       </div>
     </section>

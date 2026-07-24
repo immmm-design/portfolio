@@ -1,54 +1,62 @@
-import { Project } from '@/types';
+import { Project, MiniProject } from '@/types';
 
 export const projects: Project[] = [
   {
-    id: 'nasa-psyche',
-    title: 'Robotic Driving System for NASA Psyche Asteroid Exploration',
-    role: 'Mechanical Systems Lead & Robotics Engineer',
-    context: 'Senior Capstone Project – Arizona State University (Spring 2024)',
-    tags: ['Robotics', 'Space Engineering', 'Product Design'],
+    id: 'foldride',
+    title: 'FoldRide Pro',
+    role: 'Inventor & Product Lead',
+    context: 'Foldable Electric Skateboard · New York, NY (2025 - Present)',
+    tags: ['Consumer Hardware', 'DFM', 'Patent Pending'],
+    status: 'Engineering & manufacturing feasibility stage · U.S. provisional patent filed',
     description: [
-      'Designed a driving system for a rover to navigate asteroid 16 Psyche\'s surface (near-zero gravity, no atmosphere, metallic dust terrain). Solved critical constraints by concentrating 70% of mass in the wheels for traction and using independent left-right leg suspension enabling full 360° turns without reversing.',
-      'Led iterative design process evaluating hydraulic vs. spring-based systems (pivoted to springs after NASA mentor feedback on vacuum requirements) and magnetic vs. weight-based traction (avoided magnets due to conductive dust interference).',
-      'Delivered functional prototype meeting all NASA-specified requirements (weight, size, speed, budget). Selected tank-track configuration for lowest maintenance and highest durability in long-duration missions. Validated design through calculations and Earth-analog testing accounting for gravity differences.',
+      'Designed a foldable electric skateboard around two hard problems: a structural spine lock that stays rigid under riding loads, and a truck system that removes without tools. Translated user needs into product requirements, system architecture, engineering drawings, and factory-ready STEP files.',
+      'Filed a U.S. provisional patent application covering the folding architecture and the truck release system.',
+      'Working with factory engineers to improve manufacturability, safety systems, the dual motor drive, and backpack integration, toward a retail target below $999.',
+    ],
+  },
+  {
+    id: 'perkpulse',
+    title: 'PerkPulse AI',
+    role: 'Creator & Product Lead',
+    context: 'AI Product Prototype · Personal Project',
+    tags: ['AI Product', 'Consumer Software', 'Prototype'],
+    status: 'Working prototype',
+    description: [
+      'Credit card benefits are scattered across dense issuer guides, so most people never use what they already pay for. PerkPulse parses issuer benefits into structured data and turns them into clear monthly actions.',
+      'Scoped the MVP around three jobs: structured benefit parsing, monthly action prioritization, and purchase-category recommendations, with a privacy-first approach that avoids handling raw card data. Built on Supabase.',
+      'Next steps: evaluation against real issuer benefit guides and user testing before any go/no-go decision on a public release.',
+    ],
+  },
+  {
+    id: 'nasa-psyche',
+    title: 'Robotic Driving System for the NASA Psyche Mission',
+    role: 'Mechanical & Electrical Subsystem Design',
+    context: 'ASU Senior Capstone · Psyche Student Collaborations Program (Jan - Dec 2024)',
+    tags: ['Robotics', 'Space Systems', 'Capstone'],
+    status: 'Prototype delivered · Earth-analog tested',
+    description: [
+      'Four-person ASU senior capstone in the Psyche Student Collaborations program, guided by NASA mission mentors. Led mechanical and electrical subsystem design for an asteroid rover concept targeting 16 Psyche: near-zero gravity, no atmosphere, metallic dust terrain.',
+      'Placed roughly 70% of rover mass in the wheels for traction and developed independent suspension that enables 360-degree turns without reversing.',
+      'Worked with NASA mission mentors to replace hydraulic actuation with a vacuum-compatible spring system, then delivered a prototype that met the project\'s weight, size, speed, and budget requirements, validated through calculations and Earth-analog testing.',
     ],
     link: 'https://psyche.ssl.berkeley.edu/get-involved/capstone-projects/capstone-projects-tungsten-class/robotic-explorer-for-hypothesized-surfaces-asu-f/',
     linkText: 'View Project Details',
   },
+];
+
+export const additionalProjects: MiniProject[] = [
   {
     id: 'solar-hat',
-    title: 'Wearable Heat Stroke Prevention System',
-    role: 'Product Designer & Embedded Systems Engineer',
-    context: 'Embedded Systems Project – Arizona State University (Fall 2023)',
-    tags: ['Embedded Systems', 'Consumer Hardware', 'PCB Design'],
-    description: [
-      'Identified critical safety problem: outdoor workers in Arizona and hot climates face dangerous heat exposure leading to heat stroke hospitalizations. Current solutions rely on workers self-monitoring symptoms, which often happens too late.',
-      'Built Arduino-based wearable hat prototype with temperature and humidity sensors monitoring ambient heat exposure and perspiration levels (early dehydration indicators). Designed custom PCB in Cadence to miniaturize electronics into hat brim. Created alert system with visual/audible warnings when risk thresholds exceeded.',
-      'Validated technical feasibility and received positive survey feedback indicating strong market demand. Developed product roadmap for full commercialization: data collection from 1,000+ workers to establish heat stress baselines, predictive ML algorithm, mobile app for real-time worker/supervisor notifications, and OSHA compliance integration.',
-    ],
-  },
-  {
-    id: 'it-consulting',
-    title: 'IT Solutions Consulting Practice',
-    role: 'Founder & Lead Consultant',
-    context: '5+ Years of Entrepreneurial Experience (2019 - Present)',
-    tags: ['Product Management', 'Entrepreneurship', 'SaaS'],
-    description: [
-      'Built and operated profitable IT consulting practice serving 20+ clients (individuals and small businesses) with software, web development, and data analytics solutions. Generated $20K-$70K annually while studying full-time in the U.S. Achieved 100% referral-based growth with zero client churn.',
-      'Owned end-to-end product lifecycle for every engagement: client discovery interviews to identify root problems (not surface requests), ROI-based feature prioritization under budget constraints, custom solution development (software builds, websites, analytics dashboards), and post-launch iteration based on measurable impact.',
-      'Developed systems thinking by identifying patterns across industries (construction, legal, retail) and building reusable frameworks. Learned core PM skills in real-world setting: managing ambiguity, defining scope boundaries, saying no to feature creep, and focusing on outcomes (time saved, revenue enabled, downtime prevented) over outputs.',
-    ],
+    title: 'Wearable Heat-Stroke Prevention Prototype',
+    description:
+      'Arduino-based hat with temperature and humidity sensors, a custom Cadence PCB, and threshold alerts for outdoor workers. Early survey feedback showed initial interest.',
+    tags: ['Embedded Systems', 'PCB Design'],
   },
   {
     id: 'algo-trading',
     title: 'Algorithmic Trading System',
-    role: 'System Architect & Developer',
-    context: 'Personal Project · Cloud-Deployed (2024 – Present)',
-    tags: ['Python', 'Cloud Infrastructure', 'Fintech'],
-    description: [
-      'Designed and deployed a fully automated trading system on Google Cloud Platform executing real-capital trades on BTC and ETH perpetual futures via live exchange APIs. System runs 24/7 without manual intervention.',
-      'Architected the full pipeline end-to-end: real-time market data ingestion, signal generation logic, risk management with position sizing and stop-loss rules, and automated order execution with idempotent retry handling. Treated trading as a product problem: defined success metrics, instrumented logging, and iterated based on live performance data.',
-      'Operating with real capital forced ruthless prioritization between feature velocity and reliability. Built monitoring, alerting, and kill-switch controls before adding strategy complexity. Reinforced PM instincts: ship the smallest reliable version first, then iterate against measurable outcomes.',
-    ],
+    description:
+      'Automated BTC/ETH futures pipeline on Google Cloud covering market data ingestion, signal generation, risk controls, and order execution.',
+    tags: ['Python', 'Cloud'],
   },
 ];

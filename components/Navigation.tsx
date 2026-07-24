@@ -7,12 +7,9 @@ import { siteConfig } from '@/data/config';
 import ThemeToggle from './ThemeToggle';
 
 const navLinks = [
-  { name: 'About', href: '#about' },
-  { name: 'Philosophy', href: '#philosophy' },
+  { name: 'Work', href: '#projects' },
   { name: 'Experience', href: '#experience' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Education', href: '#education' },
+  { name: 'About', href: '#about' },
   { name: 'Contact', href: '#contact' },
 ];
 

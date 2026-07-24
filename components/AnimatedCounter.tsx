@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { useInView, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
 interface AnimatedCounterProps {
@@ -10,6 +10,8 @@ interface AnimatedCounterProps {
   duration?: number;
 }
 
+// Renders the final value in server HTML (for SEO and no-JS readers),
+// then counts up from 0 the first time it scrolls into view.
 export default function AnimatedCounter({
   target,
   prefix = '',
@@ -40,14 +42,5 @@ export default function AnimatedCounter({
     return unsubscribe;
   }, [display, prefix, suffix]);
 
-  return (
-    <motion.span
-      ref={ref}
-      initial={{ opacity: 0 }}
-      animate={isInView ? { opacity: 1 } : {}}
-      transition={{ duration: 0.4 }}
-    >
-      {`${prefix}0${suffix}`}
-    </motion.span>
-  );
+  return <span ref={ref}>{`${prefix}${target}${suffix}`}</span>;
 }

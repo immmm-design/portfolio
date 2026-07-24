@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { projects } from '@/data/projects';
+import { projects, additionalProjects } from '@/data/projects';
 
 export default function Projects() {
   const ref = useRef(null);
@@ -19,7 +19,7 @@ export default function Projects() {
           className="text-3xl lg:text-5xl font-bold mb-6"
           style={{ color: 'var(--text-main)' }}
         >
-          Projects
+          Featured Work
         </motion.h2>
 
         <motion.p
@@ -29,12 +29,12 @@ export default function Projects() {
           className="text-lg mb-12 lg:mb-16 max-w-3xl"
           style={{ color: 'var(--text-muted)' }}
         >
-          Asteroid rovers, wearables, a trading system, a consulting practice.
-          All shipped, all taught me something.
+          A patent-pending hardware product, an AI prototype, and an asteroid
+          rover capstone. Each one labeled with its honest status.
         </motion.p>
 
         {/* Project cards */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -96,7 +96,17 @@ export default function Projects() {
               <p className="text-sm font-medium mb-2" style={{ color: 'var(--text-main)' }}>
                 {project.role}
               </p>
-              <p className="text-sm mb-4" style={{ color: 'var(--text-muted)' }}>{project.context}</p>
+              <p className="text-sm mb-3" style={{ color: 'var(--text-muted)' }}>{project.context}</p>
+
+              {/* Status label */}
+              {project.status && (
+                <p
+                  className="inline-block text-xs font-medium px-2.5 py-1 rounded-md border mb-4"
+                  style={{ borderColor: 'var(--accent-primary)', color: 'var(--accent-primary)' }}
+                >
+                  {project.status}
+                </p>
+              )}
 
               {/* Description */}
               <ul className="space-y-2 mb-6">
@@ -135,6 +145,41 @@ export default function Projects() {
                   </svg>
                 </a>
               )}
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Additional technical work */}
+        <motion.h3
+          initial={{ opacity: 0, y: 15 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="text-xl font-bold mt-14 mb-5"
+          style={{ color: 'var(--text-main)' }}
+        >
+          Additional Technical Work
+        </motion.h3>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {additionalProjects.map((mini, index) => (
+            <motion.div
+              key={mini.id}
+              initial={{ opacity: 0, y: 15 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.55 + index * 0.08 }}
+              className="rounded-xl border p-5"
+              style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border-subtle)' }}
+            >
+              <div className="flex items-baseline justify-between gap-3 mb-2">
+                <h4 className="text-base font-bold" style={{ color: 'var(--text-main)' }}>
+                  {mini.title}
+                </h4>
+                <span className="text-xs whitespace-nowrap" style={{ color: 'var(--text-muted)' }}>
+                  {mini.tags.join(' · ')}
+                </span>
+              </div>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+                {mini.description}
+              </p>
             </motion.div>
           ))}
         </div>

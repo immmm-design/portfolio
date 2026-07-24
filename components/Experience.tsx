@@ -37,8 +37,9 @@ export default function Experience() {
           className="text-lg mb-12 lg:mb-16 max-w-3xl"
           style={{ color: 'var(--text-muted)' }}
         >
-          Automation, product development, consulting. Every role came down
-          to the same job: make things work better.
+          Factory floors in China, mining infrastructure, off-road
+          manufacturing, and my own consulting practice. Different industries,
+          same job: turn requirements into decisions that hold up in production.
         </motion.p>
 
         <div className="space-y-8 lg:space-y-12">

@@ -73,9 +73,12 @@ export default function Contact() {
             Let&apos;s Connect
           </h2>
 
-          <p className="text-lg mb-12" style={{ color: 'var(--text-muted)' }}>
-            Product roles, technical questions, or just robotics talk. My
-            inbox is open.
+          <p className="text-lg mb-4" style={{ color: 'var(--text-muted)' }}>
+            Full-time Technical Product Management roles, hardware questions,
+            or manufacturing talk. My inbox is open.
+          </p>
+          <p className="text-sm mb-12 font-medium" style={{ color: 'var(--text-main)' }}>
+            Available from December 2026 · New York, NY · Open to relocation
           </p>
 
           <motion.div
@@ -102,17 +105,22 @@ export default function Contact() {
                 </p>
               </div>
 
-              {siteConfig.phone && (
-                <div className="text-left">
-                  <h3 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>
-                    Phone
-                  </h3>
-                  <CopyableValue
-                    value={siteConfig.phone}
-                    href={`tel:${siteConfig.phone.replace(/\D/g, '')}`}
-                  />
-                </div>
-              )}
+              <div className="text-left">
+                <h3 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>
+                  Resume
+                </h3>
+                <a
+                  href="/resume/Ivan_Makarenko_Resume.pdf"
+                  download
+                  className="font-medium transition-colors inline-flex items-center"
+                  style={{ color: 'var(--accent-primary)' }}
+                >
+                  Download PDF
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+                  </svg>
+                </a>
+              </div>
 
               <div className="text-left">
                 <h3 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>
