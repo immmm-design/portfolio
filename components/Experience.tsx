@@ -37,7 +37,7 @@ export default function Experience() {
           className="text-lg mb-12 lg:mb-16 max-w-3xl"
           style={{ color: 'var(--text-muted)' }}
         >
-          Factory floors in China, mining infrastructure, off-road
+          Factory floors in China, electrical infrastructure, off-road
           manufacturing, and my own consulting practice. Different industries,
           same job: turn requirements into decisions that hold up in production.
         </motion.p>

@@ -2,43 +2,42 @@ import { SkillGroup } from '@/types';
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: 'Product',
+    title: 'Product & Program',
     skills: [
-      'Product strategy',
-      'Roadmapping',
-      'Requirements definition',
       'Customer discovery',
+      'Requirements & PRDs',
+      'Prioritization',
+      'Roadmaps',
+      'Cross-functional execution',
+      'Risk tracking',
       'Product validation',
-      'Supplier evaluation',
+      'Agile & Scrum',
     ],
   },
   {
-    title: 'Hardware & Manufacturing',
+    title: 'Engineering & Manufacturing',
     skills: [
       'DFM',
-      'Manufacturing feasibility',
-      'Factory & supplier coordination',
-      'Design reviews',
-      'Prototype planning',
+      'NPI',
+      'Supplier evaluation & quality',
+      'Root cause analysis',
+      '8D',
+      'FMEA',
+      'BOM & costing',
+      'Robotic automation',
+      'Mechatronics',
+      'Embedded systems',
+      'PCB design',
       'Product testing',
-      'Quality analysis',
     ],
   },
   {
     title: 'Software',
-    skills: [
-      'Python',
-      'C/C++',
-      'SQL',
-      'MATLAB',
-      'Embedded systems',
-      'PCB design',
-      'Robotic automation',
-    ],
+    skills: ['Python', 'C/C++', 'SQL', 'MATLAB'],
   },
   {
     title: 'Design & Tools',
-    skills: ['SolidWorks', 'Revit', 'AutoCAD', 'Cadence', 'Git', 'Excel', 'Tableau'],
+    skills: ['SolidWorks', 'Revit', 'AutoCAD', 'Cadence', 'Jira', 'Git', 'Excel'],
   },
 ];
 

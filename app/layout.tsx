@@ -26,6 +26,7 @@ const personJsonLd = {
   description: siteConfig.description,
   url: siteUrl,
   email: `mailto:${siteConfig.email}`,
+  telephone: siteConfig.phone,
   address: {
     "@type": "PostalAddress",
     addressLocality: "New York",
@@ -58,7 +59,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        {/* Applies the stored theme before first paint so there is no flash. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("ivan-theme");if(t!=="light"){document.documentElement.classList.add("dark")}}catch(e){document.documentElement.classList.add("dark")}})();`,
+          }}
+        />
+      </head>
       <body className="font-sans antialiased">
         <script
           type="application/ld+json"

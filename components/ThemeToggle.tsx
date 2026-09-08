@@ -1,42 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useTheme, setTheme } from './useTheme';
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-
-    // Get theme from localStorage or default to dark
-    const storedTheme = localStorage.getItem('ivan-theme') as 'light' | 'dark' | null;
-
-    if (storedTheme) {
-      setTheme(storedTheme);
-      document.documentElement.classList.toggle('dark', storedTheme === 'dark');
-    } else {
-      // Default to dark mode
-      setTheme('dark');
-      document.documentElement.classList.add('dark');
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('ivan-theme', newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-  };
-
-  // Avoid hydration mismatch
-  if (!mounted) {
-    return <div className="w-10 h-10" />;
-  }
+  const theme = useTheme();
 
   return (
     <button
-      onClick={toggleTheme}
+      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
       aria-label="Toggle theme"
     >

@@ -9,9 +9,9 @@ export const projects: Project[] = [
     tags: ['Consumer Hardware', 'DFM', 'Patent Pending'],
     status: 'In development · U.S. provisional patent filed',
     description: [
-      'Leading the development of a compact personal-mobility product focused on portability, safety, reliability, and practical everyday use. Defined the target user, product requirements, success criteria, and development roadmap.',
-      'Evaluated product architectures and engineering trade-offs across usability, structural performance, weight, cost, serviceability, and manufacturability, translating key decisions into technical documentation for engineering review.',
-      'Coordinating with factory engineers on manufacturing feasibility, product validation, risk reduction, and commercialization planning. Selected technical and visual details are withheld while intellectual-property and development work continues.',
+      'A foldable electric skateboard built around a novel folding architecture and trucks that release without tools, aimed at riders who need a board that collapses for a commute and holds up on the street.',
+      'Translated user needs into product requirements, system architecture, engineering drawings, and production-ready STEP files, weighing usability, structural performance, weight, cost, serviceability, and manufacturability at each decision.',
+      'Filed a U.S. provisional patent application covering the folding architecture and truck release system, then partnered with a factory on prototypes, dual-motor drive, safety systems, and a retail price under $999.',
     ],
   },
   {
@@ -32,14 +32,14 @@ export const projects: Project[] = [
   {
     id: 'nasa-psyche',
     title: 'NASA Psyche Asteroid Rover',
-    role: 'Mechanical & Electrical Subsystem Design',
-    context: 'ASU Capstone · Psyche Student Collaborations (2024)',
+    role: 'Electrical Subsystem Owner & Mechanical Design Support',
+    context: 'ASU Senior Capstone · Psyche Student Collaborations (Jan to Dec 2024)',
     tags: ['Robotics', 'Space Systems', 'Capstone'],
     status: 'Prototype delivered · Earth-analog tested',
     description: [
-      'Four-person ASU senior capstone guided by NASA mission mentors. Led mechanical and electrical subsystem design for an asteroid rover concept targeting 16 Psyche: near-zero gravity, no atmosphere, metallic dust terrain.',
-      'Placed roughly 70% of rover mass in the wheels for traction and developed independent suspension that enables 360-degree turns without reversing.',
-      'Replaced hydraulic actuation with a vacuum-compatible spring system after mentor review, then delivered a prototype meeting the project\'s weight, size, speed, and budget requirements.',
+      'Four-person ASU senior capstone guided by NASA mission mentors. Proposed the rover concept the team went on to build, targeting 16 Psyche: near-zero gravity, no atmosphere, metallic dust terrain.',
+      'Owned the full electrical subsystem covering power distribution, wiring, motor control, and integration, while supporting mechanical design across the team.',
+      'Enabled 360-degree turns without reversing through independent wheel speed and direction control, placed about 70% of rover mass in the wheels for traction, and replaced hydraulic actuation with vacuum-rated springs after NASA Psyche mentor feedback.',
     ],
     link: 'https://psyche.ssl.berkeley.edu/get-involved/capstone-projects/capstone-projects-tungsten-class/robotic-explorer-for-hypothesized-surfaces-asu-f/',
     linkText: 'View Project Details',

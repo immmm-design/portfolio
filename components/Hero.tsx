@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { siteConfig } from '@/data/config';
+import { useTheme } from './useTheme';
 import Image from 'next/image';
 
 export default function Hero() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const theme = useTheme();
   const heroRef = useRef(null);
 
   // Parallax effect - background moves slower than scroll (0.3 speed ratio)
@@ -16,29 +17,6 @@ export default function Hero() {
   });
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
-
-  useEffect(() => {
-    // Check initial theme
-    const isDark = document.documentElement.classList.contains('dark');
-    setTheme(isDark ? 'dark' : 'light');
-
-    // Listen for theme changes
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.attributeName === 'class') {
-          const isDark = document.documentElement.classList.contains('dark');
-          setTheme(isDark ? 'dark' : 'light');
-        }
-      });
-    });
-
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['class'],
-    });
-
-    return () => observer.disconnect();
-  }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.querySelector(sectionId);
@@ -157,7 +135,7 @@ export default function Hero() {
               color: 'var(--hero-text-muted)',
             }}
           >
-            Robotics engineer turned technical PM. Most recently at SourceOne in Guangdong, China, where I evaluated automated factories and supported product validation for U.S. hardware customers. I finish my M.S. in Technology Management at Columbia University in December 2026.
+            Robotics engineer turned technical PM. Most recently at SourceOne Ltd in Hong Kong, where I evaluated automated factories across China and ran product validation for U.S. hardware customers. I finish my M.S. in Technology Management at Columbia University in December 2026.
           </p>
 
           {/* Location line */}

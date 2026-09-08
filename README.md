@@ -40,17 +40,19 @@ portfolio/
 │   ├── About.tsx           # About section
 │   ├── Experience.tsx      # Experience timeline
 │   ├── Projects.tsx        # Projects with filtering
-│   ├── Skills.tsx          # Skills grouped by category
-│   ├── Education.tsx       # Education section
+│   ├── SkillsAndEducation.tsx  # Skills + education, side by side
+│   ├── ProductPhilosophy.tsx   # Working principles
+│   ├── StatsBand.tsx       # Animated headline numbers
 │   ├── Contact.tsx         # Contact section
+│   ├── ThemeToggle.tsx     # Light/dark switch
+│   ├── useTheme.ts         # Shared theme subscription
 │   └── Footer.tsx          # Footer
 ├── data/
 │   ├── config.ts           # Site configuration
 │   ├── experience.ts       # Experience data
 │   ├── projects.ts         # Projects data
 │   ├── skills.ts           # Skills data
-│   ├── education.ts        # Education data
-│   └── hero.ts             # Hero highlights
+│   └── education.ts        # Education data
 ├── types/
 │   └── index.ts            # TypeScript types
 └── public/
@@ -101,11 +103,10 @@ All content is stored in the `data/` folder as TypeScript files. To update:
 3. **Projects**: Add/edit projects in `data/projects.ts`
 4. **Skills**: Modify skill groups in `data/skills.ts`
 5. **Education**: Update degrees in `data/education.ts`
-6. **Hero Highlights**: Edit highlights in `data/hero.ts`
 
-### Adding a Resume
+### Updating the Resume
 
-Replace the placeholder file at `public/resume/Ivan_Makarenko_Resume.pdf` with your actual resume PDF.
+Replace `public/resume/Ivan_Makarenko_Resume.pdf` in place. The filename is referenced by the Hero and Contact download links, so keeping it stable avoids broken links.
 
 ### Theming
 
@@ -168,5 +169,5 @@ This project is open source and available under the MIT License.
 
 Ivan Makarenko
 - Email: ivan.makarenko2001@gmail.com
-- LinkedIn: [linkedin.com/in/ivan-makarenko](https://www.linkedin.com/in/ivan-makarenko)
+- LinkedIn: [linkedin.com/in/ivanmakarenko](https://www.linkedin.com/in/ivanmakarenko)
 - Location: New York, NY

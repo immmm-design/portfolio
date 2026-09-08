@@ -98,6 +98,18 @@ export default function Contact() {
 
               <div className="text-left">
                 <h3 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>
+                  Phone
+                </h3>
+                {siteConfig.phone && (
+                  <CopyableValue
+                    value={siteConfig.phone}
+                    href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, '')}`}
+                  />
+                )}
+              </div>
+
+              <div className="text-left">
+                <h3 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>
                   Location
                 </h3>
                 <p className="font-medium" style={{ color: 'var(--text-main)' }}>
