@@ -2,42 +2,50 @@ import { SkillGroup } from '@/types';
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: 'Product & Program',
+    title: 'Product',
     skills: [
       'Customer discovery',
-      'Requirements & PRDs',
+      'Requirements and PRDs',
       'Prioritization',
-      'Roadmaps',
-      'Cross-functional execution',
-      'Risk tracking',
+      'Stakeholder management',
       'Product validation',
-      'Agile & Scrum',
     ],
   },
   {
-    title: 'Engineering & Manufacturing',
+    title: 'Engineering',
     skills: [
       'DFM',
       'NPI',
-      'Supplier evaluation & quality',
+      'Supplier evaluation',
       'Root cause analysis',
-      '8D',
-      'FMEA',
-      'BOM & costing',
-      'Robotic automation',
+      'BOM and costing',
       'Mechatronics',
       'Embedded systems',
-      'PCB design',
-      'Product testing',
     ],
   },
   {
-    title: 'Software',
-    skills: ['Python', 'C/C++', 'SQL', 'MATLAB'],
+    title: 'Tools',
+    skills: [
+      'Python',
+      'SQL',
+      'C/C++',
+      'TypeScript',
+      'OpenAI API',
+      'MATLAB',
+      'SolidWorks',
+      'Revit',
+      'AutoCAD',
+      'Jira',
+      'Git',
+      'Excel',
+    ],
   },
   {
-    title: 'Design & Tools',
-    skills: ['SolidWorks', 'Revit', 'AutoCAD', 'Cadence', 'Jira', 'Git', 'Excel'],
+    title: 'Certifications',
+    skills: [
+      'Google Foundations of Project Management (2026)',
+      'Google AI Essentials (2026)',
+    ],
   },
 ];
 

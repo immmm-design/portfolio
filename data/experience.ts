@@ -4,14 +4,14 @@ export const experiences: Experience[] = [
   {
     id: 'sourceone',
     company: 'SourceOne Ltd',
-    role: 'Product Manager Intern (Remote to On-Site)',
+    role: 'Product Manager (Part-time Remote to Full-time On-site)',
     location: 'Hong Kong',
     startDate: '2026-02',
     endDate: '2026-08',
     bullets: [
-      'Evaluated about 10 automated factories across China, assessing production capability, process controls, manufacturability, and supplier risk alongside engineering, quality, and sourcing leaders.',
-      'Coordinated product validation and supplier reviews for Mainspring Energy, Toyota USA, and Rough Country, translating customer requirements and factory findings into documented technical issues, risks, and next steps.',
-      'Inspected casting, forging, machining, and laser cutting operations against engineering drawings and quality documentation, converting findings into recommendations for product, engineering, and sourcing teams.',
+      'Evaluated 10 automated factories in China on site for production capability, process controls, manufacturability, and supplier risk, inspecting casting, forging, machining, and laser cutting against engineering drawings.',
+      'Translated requirements from 3 U.S. customers (Mainspring Energy, Toyota USA, Rough Country) into prioritized technical issues, risks, and next steps for cross-functional engineering, quality, and sourcing teams.',
+      'Presented each factory recommendation to customers and senior product leadership, backed by supplier evaluations, quality reports, and product-testing observations.',
     ],
   },
   {
@@ -22,8 +22,8 @@ export const experiences: Experience[] = [
     startDate: '2019-06',
     endDate: '2025-12',
     bullets: [
-      'Built a referral practice serving 20+ clients, generating $20K to $70K in annual revenue with recurring retainers.',
-      'Led discovery, requirements definition, prioritization, delivery, and iteration for 10+ software, web, and analytics products across construction, legal services, and retail.',
+      'Led 10+ software, web, and analytics products for construction, legal, and retail businesses from client discovery and requirements through delivery and iteration.',
+      'Grew a referral-based practice to 20+ clients on recurring retainers as their primary contact for requirements and delivery.',
     ],
   },
   {
@@ -34,7 +34,7 @@ export const experiences: Experience[] = [
     startDate: '2024-06',
     endDate: '2024-08',
     bullets: [
-      'Reviewed about 90 legacy electrical schematics across 12 projects, identified discrepancies in roughly 25%, and updated the corresponding Revit models ahead of multidisciplinary design reviews.',
+      'Caught discrepancies in 25% of 90 legacy electrical schematics across 12 mining infrastructure projects and corrected the matching Revit models ahead of multidisciplinary design reviews.',
       'Standardized Revit templates and built an Excel tracker that centralized documentation across electrical, mechanical, and civil teams, improving consistency and project visibility.',
     ],
   },
@@ -46,8 +46,8 @@ export const experiences: Experience[] = [
     startDate: '2023-06',
     endDate: '2023-08',
     bullets: [
-      'Compiled a vehicle trim and compatibility database covering 50+ truck models, reducing the research needed to select scan vehicles and confirm part compatibility and shortening design cycles by an estimated 30%.',
-      'Developed truck components from laser scanning and SolidWorks CAD through assembly and testing, then supported layout, fixturing, and controller setup for two OTC DAIHEN robotic welding cells, both now in production.',
+      'Supported layout, fixturing, and controller setup for 2 OTC DAIHEN robotic welding cells now in production, after developing truck components from laser scanning and SolidWorks CAD through assembly and testing.',
+      'Cut design cycles by approximately 30% with a fitment database covering 50+ truck models that reduced repeat research.',
     ],
   },
 ];

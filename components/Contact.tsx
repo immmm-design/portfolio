@@ -75,7 +75,7 @@ export default function Contact() {
 
           <p className="text-lg mb-4" style={{ color: 'var(--text-muted)' }}>
             Full-time Technical Product Management roles, hardware questions,
-            or manufacturing talk. My inbox is open.
+            AI product talk, or manufacturing talk. My inbox is open.
           </p>
           <p className="text-sm mb-12 font-medium" style={{ color: 'var(--text-main)' }}>
             Available from December 2026 · New York, NY · Open to relocation

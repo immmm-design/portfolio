@@ -2,9 +2,9 @@ import { SiteConfig } from '@/types';
 
 export const siteConfig: SiteConfig = {
   name: 'Ivan Makarenko',
-  title: 'Ivan Makarenko – Technical Product Manager · Robotics · Hardware & Manufacturing',
+  title: 'Ivan Makarenko – Technical Product Management · Robotics & Manufacturing · AI-Enabled Products',
   description:
-    'Technical Product Manager with robotics engineering depth: factory and supplier evaluation across China, hardware product development from requirements through production, and a patent-pending consumer mobility product. M.S. in Technology Management at Columbia University, December 2026.',
+    'Robotics engineer and Columbia M.S. Technology Management candidate who evaluated 10 factories in China for U.S. customers including Toyota USA, deployed an LLM prototype, and filed a U.S. provisional patent application.',
   email: 'ivan.makarenko2001@gmail.com',
   phone: '(623) 309-6780',
   location: 'New York, NY',

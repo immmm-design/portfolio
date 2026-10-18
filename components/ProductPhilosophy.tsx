@@ -78,17 +78,17 @@ export default function ProductPhilosophy() {
     {
       title: 'Define',
       description:
-        'Translate needs into requirements, constraints, and success metrics. FoldRide Pro went from user needs to product requirements, architecture decisions, and technical documentation for engineering review.',
+        'Translate needs into requirements, constraints, and success metrics. FoldRide Pro went from rider feedback to product requirements, 6 drawing revisions, and production-intent STEP files.',
     },
     {
       title: 'Validate',
       description:
-        'Test assumptions with prototypes, engineering reviews, and expert feedback. On the NASA Psyche capstone, mentor review killed our hydraulic design; the vacuum-compatible spring system came out of that loop.',
+        'Test assumptions with prototypes, evaluations, and expert feedback. On the NASA Psyche capstone, mentor review killed our hydraulic design; the vacuum-compatible spring system came out of that loop. PerkPulse shipped only after scoring 20/20 on parser outputs in controlled tests.',
     },
     {
       title: 'Deliver',
       description:
-        'Coordinate product, engineering, and manufacturing around clear decisions. At Addictive Desert Designs, a 50-model compatibility database became the shared reference that cut design cycles by roughly 30%.',
+        'Coordinate product, engineering, and manufacturing around clear decisions. At Addictive Desert Designs, a 50-model fitment database became the shared reference that cut design cycles by roughly 30%.',
     },
   ];
 

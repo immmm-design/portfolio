@@ -29,8 +29,8 @@ export default function Projects() {
           className="text-lg mb-12 lg:mb-16 max-w-3xl"
           style={{ color: 'var(--text-muted)' }}
         >
-          A patent-pending hardware product, an AI prototype, and an asteroid
-          rover capstone.
+          An evaluated AI prototype, a patent-pending hardware product, and an
+          asteroid rover capstone.
         </motion.p>
 
         {/* Project cards */}

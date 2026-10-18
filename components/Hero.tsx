@@ -109,7 +109,7 @@ export default function Hero() {
               color: 'var(--hero-accent)',
             }}
           >
-            Technical Product Manager · Robotics · Hardware &amp; Manufacturing
+            Technical Product Management · Robotics &amp; Manufacturing · AI-Enabled Products
           </div>
 
           {/* Main Headline */}
@@ -135,7 +135,7 @@ export default function Hero() {
               color: 'var(--hero-text-muted)',
             }}
           >
-            Robotics engineer turned technical PM. Most recently at SourceOne Ltd in Hong Kong, where I evaluated automated factories across China and ran product validation for U.S. hardware customers. I finish my M.S. in Technology Management at Columbia University in December 2026.
+            Robotics engineer turned technical PM. I evaluated 10 factories in China for U.S. customers including Toyota USA, deployed an LLM prototype, and filed a U.S. provisional patent application. I finish my M.S. in Technology Management at Columbia University in December 2026.
           </p>
 
           {/* Location line */}

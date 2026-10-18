@@ -44,18 +44,18 @@ export default function About() {
                 I&apos;m a <strong style={{ color: 'var(--text-main)' }}>robotics engineer who moved into product</strong> because the hardest problems I kept running into were not technical. They were about deciding what to build, for whom, and under which constraints.
               </p>
               <p>
-                Through August 2026 I worked at <strong style={{ color: 'var(--text-main)' }}>SourceOne Ltd in Hong Kong</strong>, evaluating automated factories across China and supporting product validation for customers including Mainspring Energy, Toyota USA, and Rough Country. Now I&apos;m back in New York, finishing my M.S. in Technology Management at Columbia University.
+                Through August 2026 I worked at <strong style={{ color: 'var(--text-main)' }}>SourceOne Ltd in Hong Kong</strong>, evaluating 10 automated factories across China and presenting recommendations to customers including Mainspring Energy, Toyota USA, and Rough Country. Now I&apos;m back in New York, finishing my M.S. in Technology Management at Columbia University.
               </p>
             </div>
           </div>
 
           <div className="space-y-4 leading-relaxed text-lg" style={{ color: 'var(--text-muted)' }}>
             <p>
-              My focus is <strong style={{ color: 'var(--text-main)' }}>technical product management for robotics, hardware, and AI-enabled physical products</strong>. The through-line in my work is the full chain from customer requirements to engineering decisions to manufacturing reality: FoldRide Pro from user needs to a filed patent and production files, a NASA Psyche capstone from constraints to tested prototype, and factory evaluations from customer specs to supplier decisions.
+              My focus is <strong style={{ color: 'var(--text-main)' }}>technical product management for robotics, hardware, and AI-enabled products</strong>. The through-line in my work is the full chain from customer requirements to engineering decisions to manufacturing reality: PerkPulse AI from dense issuer guides to an evaluated LLM prototype, FoldRide Pro from rider feedback to a filed patent and production-intent files, and factory evaluations from customer specs to supplier decisions.
             </p>
 
             <p className="text-base" style={{ color: 'var(--text-muted)' }}>
-              Off the clock: Ukrainian, former national-level swimmer, educated and employed across three countries.
+              Off the clock: Ukrainian, three-time national junior swimming champion, educated and employed across three countries.
             </p>
           </div>
         </motion.div>

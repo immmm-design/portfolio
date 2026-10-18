@@ -49,6 +49,8 @@ const personJsonLd = {
     "Hardware Product Development",
     "Manufacturing",
     "Design for Manufacturing",
+    "AI-Enabled Products",
+    "Large Language Model Applications",
   ],
   sameAs: [siteConfig.linkedin],
 };
