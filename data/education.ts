@@ -13,7 +13,7 @@ export const education: Education[] = [
   {
     id: 'asu',
     institution: 'Arizona State University, Ira A. Fulton Schools of Engineering',
-    degree: 'B.S.E. in Engineering, Robotics',
+    degree: 'B.S. in Engineering, Robotics',
     location: 'Mesa, AZ',
     startDate: '2020-08',
     endDate: '2024-12',
