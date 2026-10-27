@@ -6,8 +6,8 @@ import AnimatedCounter from './AnimatedCounter';
 
 const stats = [
   { target: 10, suffix: '', label: 'Automated factories evaluated in China' },
+  { target: 20, suffix: '+', label: 'Clients served in consulting practice' },
   { target: 30, suffix: '%', label: 'Faster design cycles at ADD' },
-  { target: 500, suffix: '', label: 'Prospective riders surveyed for FoldRide' },
   { target: 90, suffix: '', label: 'Legacy schematics reviewed at Stantec' },
 ];
 
